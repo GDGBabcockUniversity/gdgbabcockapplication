@@ -33,6 +33,11 @@ export const metadata: Metadata = {
   title: "GDG Babcock University - Leadership Recruitment",
   description:
     "Join the GDG Babcock University leadership team. Apply for exciting leadership positions and build your career in tech.",
+  icons: {
+    icon: "/gdg-logo.svg",
+    shortcut: "/gdg-logo.svg",
+    apple: "/gdg-logo.svg",
+  },
   openGraph: {
     title: "GDG Babcock University - Leadership Recruitment",
     description:
@@ -46,6 +51,7 @@ export const metadata: Metadata = {
       },
     ],
     type: "website",
+    siteName: "GDG Babcock University",
   },
   twitter: {
     card: "summary_large_image",
@@ -64,6 +70,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <link rel="icon" href="/gdg-logo.svg" type="image/svg+xml" />
+      </head>
       <body className={`font-sans ${googleSansDisplay.variable} ${robotoMono.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />

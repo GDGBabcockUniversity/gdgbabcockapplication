@@ -401,10 +401,30 @@ export default function GDGRecruitmentPage() {
           </div>
 
           <div className="max-w-4xl mx-auto relative">
-            {/* Vertical line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-500 h-full"></div>
+            {/* Vertical line - hidden on mobile, shown on md+ */}
+            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-500 h-full"></div>
 
-            <div className="space-y-16">
+            {/* Mobile layout */}
+            <div className="md:hidden space-y-8">
+              {timeline.map((item, index) => (
+                <div key={index} className="flex items-start gap-4">
+                  <div
+                    className={`w-10 h-10 rounded-full ${item.color} flex items-center justify-center text-white font-bold flex-shrink-0`}
+                  >
+                    {item.number}
+                  </div>
+                  <Card className="bg-gray-800 border-gray-600 flex-1">
+                    <CardHeader>
+                      <CardTitle className="text-white text-lg">{item.event}</CardTitle>
+                      <CardDescription className="text-gray-300 font-mono text-sm">{item.date}</CardDescription>
+                    </CardHeader>
+                  </Card>
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop layout */}
+            <div className="hidden md:block space-y-16">
               {timeline.map((item, index) => (
                 <div key={index} className="relative flex items-center">
                   {/* Circle with number */}

@@ -34,9 +34,13 @@ export const metadata: Metadata = {
   description:
     "Join the GDG Babcock University leadership team. Apply for exciting leadership positions and build your career in tech.",
   icons: {
-    icon: "/gdg-logo.svg",
-    shortcut: "/gdg-logo.svg",
-    apple: "/gdg-logo.svg",
+    icon: [
+      { url: "/gdg-logo.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "GDG Babcock University - Leadership Recruitment",
@@ -44,7 +48,7 @@ export const metadata: Metadata = {
       "Join the GDG Babcock University leadership team. Apply for exciting leadership positions and build your career in tech.",
     images: [
       {
-        url: "/gdg-logo.svg",
+        url: "https://gdgbabcockapplications.vercel.app/gdg-logo.svg",
         width: 1200,
         height: 630,
         alt: "GDG Babcock University Logo",
@@ -52,13 +56,19 @@ export const metadata: Metadata = {
     ],
     type: "website",
     siteName: "GDG Babcock University",
+    url: "https://gdgbabcockapplications.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
     title: "GDG Babcock University - Leadership Recruitment",
     description:
       "Join the GDG Babcock University leadership team. Apply for exciting leadership positions and build your career in tech.",
-    images: ["/gdg-logo.svg"],
+    images: ["https://gdgbabcockapplications.vercel.app/gdg-logo.svg"],
+  },
+  other: {
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:image:type": "image/svg+xml",
   },
     generator: 'v0.app'
 }
@@ -72,6 +82,9 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <link rel="icon" href="/gdg-logo.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className={`font-sans ${googleSansDisplay.variable} ${robotoMono.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>

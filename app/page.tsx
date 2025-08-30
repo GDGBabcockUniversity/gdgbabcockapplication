@@ -463,7 +463,7 @@ export default function GDGRecruitmentPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg px-8 py-6 bg-blue-600 hover:bg-blue-700 text-white" asChild>
               <a
-                href="https://docs.google.com/forms/d/1v8ejSZy8hjVqHhV1zqS-y9GD89vqTRV2jh6AXeo0hxY/edit"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSevGSx5ShuLbwMRlF-VgHwCWS171D96-t92euUX509FHk1C9A/viewform?usp=header"
                 target="_blank"
                 rel="noopener noreferrer"
               >

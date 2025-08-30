@@ -33,7 +33,28 @@ export const metadata: Metadata = {
   title: "GDG Babcock University - Leadership Recruitment",
   description:
     "Join the GDG Babcock University leadership team. Apply for exciting leadership positions and build your career in tech.",
-  generator: "v0.app",
+  openGraph: {
+    title: "GDG Babcock University - Leadership Recruitment",
+    description:
+      "Join the GDG Babcock University leadership team. Apply for exciting leadership positions and build your career in tech.",
+    images: [
+      {
+        url: "/gdg-logo.svg",
+        width: 1200,
+        height: 630,
+        alt: "GDG Babcock University Logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GDG Babcock University - Leadership Recruitment",
+    description:
+      "Join the GDG Babcock University leadership team. Apply for exciting leadership positions and build your career in tech.",
+    images: ["/gdg-logo.svg"],
+  },
+    generator: 'v0.app'
 }
 
 export default function RootLayout({

@@ -30,7 +30,7 @@ export default function GDGRecruitmentPage() {
   })
 
   useEffect(() => {
-    const targetDate = new Date("2025-09-06T23:59:59")
+    const targetDate = new Date("2025-09-07T23:59:59")
 
     const timer = setInterval(() => {
       const now = new Date().getTime()

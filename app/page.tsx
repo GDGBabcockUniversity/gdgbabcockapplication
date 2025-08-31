@@ -214,7 +214,7 @@ export default function GDGRecruitmentPage() {
   ]
 
   const timeline = [
-    { date: "September 6, 2025", event: "Application Deadline", status: "deadline", number: 1, color: "bg-blue-500" },
+    { date: "September 7, 2025", event: "Application Deadline", status: "deadline", number: 1, color: "bg-blue-500" },
     { date: "September 9-13, 2025", event: "Interview Period", status: "process", number: 2, color: "bg-green-500" },
     { date: "September 16, 2025", event: "Results Announcement", status: "results", number: 3, color: "bg-yellow-500" },
   ]

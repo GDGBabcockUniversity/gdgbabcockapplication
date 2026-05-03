@@ -4,81 +4,52 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color tokens to match Google brand colors for GDG recruitment page */
-  --background: oklch(0.08 0 0); /* #121212 Dark Background */
-  --foreground: oklch(1 0 0); /* #FFFFFF Text */
-  --card: oklch(0.12 0 0); /* #1E1E1E Card Background */
-  --card-foreground: oklch(0.88 0 0); /* #E0E0E0 Card Text */
-  --popover: oklch(0.12 0 0); /* #1E1E1E Popover Background */
-  --popover-foreground: oklch(1 0 0); /* #FFFFFF Popover Text */
-  --primary: oklch(0.6 0.2 264); /* #4285F4 Google Blue */
-  --primary-foreground: oklch(1 0 0); /* #FFFFFF Button Text */
-  --secondary: oklch(0.65 0.15 145); /* #34A853 Google Green */
-  --secondary-foreground: oklch(1 0 0); /* #FFFFFF Secondary Text */
-  --muted: oklch(0.88 0 0); /* #E0E0E0 Muted Elements */
-  --muted-foreground: oklch(0.08 0 0); /* #121212 Muted Text */
-  --accent: oklch(0.8 0.15 85); /* #FBBC05 Google Yellow */
-  --accent-foreground: oklch(0.08 0 0); /* #121212 Accent Text */
-  --destructive: oklch(0.6 0.2 25); /* #EA4335 Google Red */
-  --destructive-foreground: oklch(1 0 0); /* #FFFFFF Destructive Text */
-  --border: oklch(0.26 0 0); /* #424242 Dark Border */
-  --input: oklch(0.12 0 0); /* #1E1E1E Input Background */
-  --ring: oklch(0.6 0.2 264); /* #4285F4 Focus Ring */
-  --chart-1: oklch(0.65 0.15 145); /* #34A853 Chart Color 1 */
-  --chart-2: oklch(0.8 0.15 85); /* #FBBC05 Chart Color 2 */
-  --chart-3: oklch(0.6 0.2 25); /* #EA4335 Chart Color 3 */
-  --chart-4: oklch(0.6 0.2 264); /* #4285F4 Chart Color 4 */
-  --chart-5: oklch(0.88 0 0); /* #E0E0E0 Chart Color 5 */
-  --radius: 0.5rem; /* Corner Rounding */
-  --sidebar: oklch(0.12 0 0); /* #1E1E1E Sidebar Background */
-  --sidebar-foreground: oklch(0.88 0 0); /* #E0E0E0 Sidebar Text */
-  --sidebar-primary: oklch(0.6 0.2 264); /* #4285F4 Sidebar Primary Color */
-  --sidebar-primary-foreground: oklch(1 0 0); /* #FFFFFF Sidebar Primary Text */
-  --sidebar-accent: oklch(0.8 0.15 85); /* #FBBC05 Sidebar Accent Color */
-  --sidebar-accent-foreground: oklch(0.08 0 0); /* #121212 Sidebar Accent Text */
-  --sidebar-border: oklch(0.26 0 0); /* #424242 Sidebar Border */
-  --sidebar-ring: oklch(0.6 0.2 264); /* #4285F4 Sidebar Ring */
-}
+  /* GDG Babcock Brand System — Beige & Black */
+  --background: #FFF6E0;
+  --foreground: #0F0F0F;
+  --card: #FFFFFF;
+  --card-foreground: #0F0F0F;
+  --popover: #FFFFFF;
+  --popover-foreground: #0F0F0F;
+  --primary: #0F0F0F;
+  --primary-foreground: #FFF6E0;
+  --secondary: #F5EDD6;
+  --secondary-foreground: #0F0F0F;
+  --muted: #F5EDD6;
+  --muted-foreground: #444444;
+  --accent: #F5EDD6;
+  --accent-foreground: #0F0F0F;
+  --destructive: #EA4335;
+  --destructive-foreground: #FFFFFF;
+  --border: #E8DFC8;
+  --input: #F5EDD6;
+  --ring: #0F0F0F;
 
-.dark {
-  /* Dark mode uses same colors since this is already a dark theme */
-  --background: oklch(0.08 0 0);
-  --foreground: oklch(1 0 0);
-  --card: oklch(0.12 0 0);
-  --card-foreground: oklch(0.88 0 0);
-  --popover: oklch(0.12 0 0);
-  --popover-foreground: oklch(1 0 0);
-  --primary: oklch(0.6 0.2 264);
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.65 0.15 145);
-  --secondary-foreground: oklch(1 0 0);
-  --muted: oklch(0.88 0 0);
-  --muted-foreground: oklch(0.08 0 0);
-  --accent: oklch(0.8 0.15 85);
-  --accent-foreground: oklch(0.08 0 0);
-  --destructive: oklch(0.6 0.2 25);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.26 0 0);
-  --input: oklch(0.12 0 0);
-  --ring: oklch(0.6 0.2 264);
-  --chart-1: oklch(0.65 0.15 145);
-  --chart-2: oklch(0.8 0.15 85);
-  --chart-3: oklch(0.6 0.2 25);
-  --chart-4: oklch(0.6 0.2 264);
-  --chart-5: oklch(0.88 0 0);
-  --sidebar: oklch(0.12 0 0);
-  --sidebar-foreground: oklch(0.88 0 0);
-  --sidebar-primary: oklch(0.6 0.2 264);
-  --sidebar-primary-foreground: oklch(1 0 0);
-  --sidebar-accent: oklch(0.8 0.15 85);
-  --sidebar-accent-foreground: oklch(0.08 0 0);
-  --sidebar-border: oklch(0.26 0 0);
-  --sidebar-ring: oklch(0.6 0.2 264);
+  /* Google Brand Accent Colors */
+  --google-blue: #4285F4;
+  --google-red: #EA4335;
+  --google-yellow: #F9AB00;
+  --google-green: #34A853;
+
+  --chart-1: #4285F4;
+  --chart-2: #F9AB00;
+  --chart-3: #34A853;
+  --chart-4: #EA4335;
+  --chart-5: #444444;
+  --radius: 0.625rem;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #0F0F0F;
+  --sidebar-primary: #0F0F0F;
+  --sidebar-primary-foreground: #FFF6E0;
+  --sidebar-accent: #F5EDD6;
+  --sidebar-accent-foreground: #0F0F0F;
+  --sidebar-border: #E8DFC8;
+  --sidebar-ring: #0F0F0F;
 }
 
 @theme inline {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-google-sans-display), system-ui, sans-serif;
+  --font-mono: var(--font-roboto-mono), monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -125,3 +96,56 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom selection color */
+::selection {
+  background: #0F0F0F;
+  color: #FFF6E0;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animation-delay-100 { animation-delay: 0.1s; }
+.animation-delay-200 { animation-delay: 0.2s; }
+.animation-delay-300 { animation-delay: 0.3s; }
+.animation-delay-400 { animation-delay: 0.4s; }
+.animation-delay-500 { animation-delay: 0.5s; }
+.animation-delay-600 { animation-delay: 0.6s; }
+.animation-delay-700 { animation-delay: 0.7s; }
+.animation-delay-800 { animation-delay: 0.8s; }
+
+/* Ticker / marquee */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}
+
+/* Google color dots */
+.dot-blue { background-color: #4285F4; }
+.dot-red { background-color: #EA4335; }
+.dot-yellow { background-color: #F9AB00; }
+.dot-green { background-color: #34A853; }

@@ -30,9 +30,9 @@ const robotoMono = Roboto_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "GDG Babcock University - Leadership Recruitment",
+  title: "Apply — GDG on Campus Babcock",
   description:
-    "Join the GDG Babcock University leadership team. Apply for exciting leadership positions and build your career in tech.",
+    "The 2026–2027 leadership application portal for GDG on Campus Babcock. Ten executive offices. One institution. Apply now.",
   icons: {
     icon: [
       { url: "/gdg-logo.svg", type: "image/svg+xml" },
@@ -43,34 +43,28 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "GDG Babcock University - Leadership Recruitment",
+    title: "Apply — GDG on Campus Babcock",
     description:
-      "Join the GDG Babcock University leadership team. Apply for exciting leadership positions and build your career in tech.",
+      "The 2026–2027 leadership application portal. Ten executive offices. One institution.",
     images: [
       {
         url: "https://gdgbabcockapplications.vercel.app/gdg-logo.svg",
         width: 1200,
         height: 630,
-        alt: "GDG Babcock University Logo",
+        alt: "GDG on Campus Babcock",
       },
     ],
     type: "website",
-    siteName: "GDG Babcock University",
+    siteName: "GDG on Campus Babcock",
     url: "https://gdgbabcockapplications.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
-    title: "GDG Babcock University - Leadership Recruitment",
+    title: "Apply — GDG on Campus Babcock",
     description:
-      "Join the GDG Babcock University leadership team. Apply for exciting leadership positions and build your career in tech.",
+      "The 2026–2027 leadership application portal. Ten executive offices. One institution.",
     images: ["https://gdgbabcockapplications.vercel.app/gdg-logo.svg"],
   },
-  other: {
-    "og:image:width": "1200",
-    "og:image:height": "630",
-    "og:image:type": "image/svg+xml",
-  },
-    generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -79,7 +73,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         <link rel="icon" href="/gdg-logo.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />

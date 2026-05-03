@@ -253,9 +253,10 @@ function AnimatedCounter({ target }: { target: string }) {
 export default function ApplyPage() {
   const [activeRole, setActiveRole] = useState(0)
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+  const [isExpired, setIsExpired] = useState(false)
 
   useEffect(() => {
-    const targetDate = new Date("2025-09-07T23:59:59")
+    const targetDate = new Date("2026-05-12T23:59:59")
     const timer = setInterval(() => {
       const now = new Date().getTime()
       const distance = targetDate.getTime() - now
@@ -266,6 +267,8 @@ export default function ApplyPage() {
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000),
         })
+      } else {
+        setIsExpired(true)
       }
     }, 1000)
     return () => clearInterval(timer)
@@ -312,6 +315,7 @@ export default function ApplyPage() {
             GDG on Campus Babcock is selecting its next Executive Leadership.
             We are looking for ten people who understand that office is for
             responsibility, not prestige.
+            <span className="block mt-3 text-base font-mono text-[#6B6B6B]">Applications open May 5 – May 12, 2026</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-300">
             <Button asChild className="bg-[#0F0F0F] text-[#FFF6E0] hover:bg-[#2D2D2D] rounded-full px-8 py-6 text-base font-medium">
@@ -592,27 +596,36 @@ export default function ApplyPage() {
         <div className="max-w-4xl mx-auto text-center">
           <GoogleDots className="mb-6 justify-center" />
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">
-            The window is open.
+            {isExpired ? "Applications are closed." : "The window is open."}
           </h2>
           <p className="text-lg text-[#FFF6E0]/60 mb-12 max-w-xl mx-auto">
-            Office is for responsibility, not prestige. If you understand that, we want to hear from you.
+            {isExpired
+              ? "Thank you to everyone who applied. The Leadership Selection Panel is now reviewing applications."
+              : "Office is for responsibility, not prestige. If you understand that, we want to hear from you."}
           </p>
 
           {/* Countdown */}
-          <div className="flex justify-center gap-4 md:gap-6 mb-12 flex-wrap">
-            {Object.entries(timeLeft).map(([unit, value]) => (
-              <div key={unit} className="bg-[#1a1a1a] border border-[#2D2D2D] rounded-xl p-4 md:p-6 min-w-[80px]">
-                <div className="text-3xl md:text-4xl font-bold tabular-nums">{String(value).padStart(2, "0")}</div>
-                <div className="text-xs text-[#FFF6E0]/40 uppercase font-mono mt-1 tracking-wider">{unit}</div>
+          {!isExpired && (
+            <>
+              <div className="flex justify-center gap-4 md:gap-6 mb-4 flex-wrap">
+                {Object.entries(timeLeft).map(([unit, value]) => (
+                  <div key={unit} className="bg-[#1a1a1a] border border-[#2D2D2D] rounded-xl p-4 md:p-6 min-w-[80px]">
+                    <div className="text-3xl md:text-4xl font-bold tabular-nums">{String(value).padStart(2, "0")}</div>
+                    <div className="text-xs text-[#FFF6E0]/40 uppercase font-mono mt-1 tracking-wider">{unit}</div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+              <p className="text-sm text-[#FFF6E0]/40 font-mono mb-12">Applications close May 12, 2026 at 11:59 PM</p>
+            </>
+          )}
 
-          <Button asChild className="bg-[#FFF6E0] text-[#0F0F0F] hover:bg-white rounded-full px-10 py-6 text-base font-bold">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSevGSx5ShuLbwMRlF-VgHwCWS171D96-t92euUX509FHk1C9A/viewform?usp=header" target="_blank" rel="noopener noreferrer">
-              Submit Your Application
-            </a>
-          </Button>
+          {!isExpired && (
+            <Button asChild className="bg-[#FFF6E0] text-[#0F0F0F] hover:bg-white rounded-full px-10 py-6 text-base font-bold">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSevGSx5ShuLbwMRlF-VgHwCWS171D96-t92euUX509FHk1C9A/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+                Submit Your Application
+              </a>
+            </Button>
+          )}
         </div>
       </section>
 

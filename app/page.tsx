@@ -277,8 +277,7 @@ export default function ApplyPage() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FFF6E0]/90 backdrop-blur-md border-b border-[#E8DFC8]">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/gdg-logo.svg" alt="GDG" className="h-8 w-auto" />
-            <span className="font-bold text-lg tracking-tight">GDG Babcock</span>
+            <img src="/gdg-logo.svg" alt="GDG on Campus Babcock" className="h-8 w-auto" />
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
             <a href="#about" className="hover:opacity-60 transition-opacity">About</a>
@@ -621,8 +620,7 @@ export default function ApplyPage() {
       <footer className="py-10 px-6 border-t border-[#E8DFC8]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img src="/gdg-logo.svg" alt="GDG" className="h-6 w-auto" />
-            <span className="text-sm text-[#444444]">GDG on Campus Babcock</span>
+            <img src="/gdg-logo.svg" alt="GDG on Campus Babcock" className="h-6 w-auto" />
           </div>
           <div className="flex items-center gap-6 text-sm text-[#444444]">
             <a href="https://gdgbabcock.com" target="_blank" rel="noopener noreferrer" className="hover:text-[#0F0F0F] transition-colors">gdgbabcock.com</a>

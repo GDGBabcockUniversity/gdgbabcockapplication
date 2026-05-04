@@ -101,7 +101,7 @@ function RotatingTypewriter() {
 
 const EXECUTIVE_ROLES = [
   {
-    title: "Organizer",
+    title: "Organizer / President",
     mandate: "Lead the Chapter",
     description:
       "Serve as the principal leader and public representative. Provide strategic direction, chair executive meetings, and ensure institutional integrity across the tenure.",

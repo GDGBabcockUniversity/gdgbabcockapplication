@@ -113,7 +113,7 @@ const EXECUTIVE_ROLES = [
       "Serve as the principal deputy. Coordinate strategic internal administration, monitor accountability across offices, and chair the Extended Leadership Council.",
   },
   {
-    title: "Operations Lead",
+    title: "General Secretary",
     mandate: "Record & Administer",
     description:
       "Serve as the official record-keeper. Maintain minutes, prepare agendas, manage the physical asset register, and ensure orderly handover of all Chapter property.",

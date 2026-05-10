@@ -103,62 +103,273 @@ const EXECUTIVE_ROLES = [
   {
     title: "Organizer / President",
     mandate: "Lead the Chapter",
-    description:
-      "Serve as the principal leader and public representative. Provide strategic direction, chair executive meetings, and ensure institutional integrity across the tenure.",
+    purpose:
+      "Serve as the principal leader and public representative of GDG on Campus Babcock. Provide strategic direction, chair executive meetings, and ensure institutional integrity across the tenure.",
+    responsibilities: [
+      "Set and communicate the Chapter's strategic vision and priorities",
+      "Chair all Executive Council meetings and represent the Chapter externally",
+      "Oversee all offices and ensure alignment with constitutional mandates",
+      "Maintain official relationship with Google Developer Groups program and university administration",
+      "Lead crisis resolution and final decision-making on unresolved matters",
+      "Ensure smooth leadership transitions and institutional continuity",
+    ],
+    requirements: [
+      "Prior leadership experience in a structured organization",
+      "Deep understanding of GDG on Campus Babcock's mission, products, and governance",
+      "Strong public speaking and stakeholder communication skills",
+      "Demonstrated ability to lead cross-functional teams",
+      "Minimum one year of active participation in the community",
+    ],
+    panelLooksFor: [
+      "Strategic thinking and long-term vision",
+      "Ability to inspire and unite diverse teams",
+      "Composure under pressure and sound judgment",
+      "Institutional mindset — building beyond personal tenure",
+      "Alignment with GDG community values",
+    ],
   },
   {
     title: "Vice-President",
     mandate: "Coordinate & Align",
-    description:
-      "Serve as the principal deputy. Coordinate strategic internal administration, monitor accountability across offices, and chair the Extended Leadership Council.",
+    purpose:
+      "Serve as the principal deputy. Coordinate strategic internal administration, monitor accountability across all offices, and chair the Extended Leadership Council.",
+    responsibilities: [
+      "Coordinate day-to-day operations and ensure cross-office alignment",
+      "Monitor delivery timelines and accountability across all executive offices",
+      "Chair the Extended Leadership Council and manage its agenda",
+      "Step in as acting Organizer when the President is unavailable",
+      "Oversee internal governance processes including performance reviews",
+      "Mediate inter-office conflicts and escalate unresolved issues to the Organizer",
+    ],
+    requirements: [
+      "Prior experience in operational coordination or project management",
+      "Strong organizational and time management skills",
+      "Working knowledge of all ten executive offices and their mandates",
+      "Demonstrated ability to hold peers accountable without damaging relationships",
+      "Active participation in the community for at least one semester",
+    ],
+    panelLooksFor: [
+      "Operational awareness and attention to detail",
+      "Diplomatic communication and conflict resolution skills",
+      "Ability to manage multiple moving parts simultaneously",
+      "Understanding of institutional accountability systems",
+      "Commitment to team cohesion and shared success",
+    ],
   },
   {
     title: "General Secretary",
     mandate: "Record & Administer",
-    description:
-      "Serve as the official record-keeper. Maintain minutes, prepare agendas, manage the physical asset register, and ensure orderly handover of all Chapter property.",
+    purpose:
+      "Serve as the official record-keeper and administrative backbone of the Chapter. Maintain minutes, prepare agendas, manage the asset register, and ensure orderly handover of all Chapter property.",
+    responsibilities: [
+      "Record minutes of all Executive Council and Extended Leadership Council meetings",
+      "Prepare and circulate meeting agendas at least 24 hours in advance",
+      "Maintain the Chapter's official asset register (physical and digital)",
+      "Coordinate and document the handover process at each leadership transition",
+      "Manage official correspondence and internal communication logs",
+      "Ensure all governance documents are current, accessible, and properly archived",
+    ],
+    requirements: [
+      "Excellent written communication and documentation skills",
+      "Experience with record-keeping, note-taking, or administrative roles",
+      "Proficiency with productivity tools (Google Workspace, Notion, or similar)",
+      "Strong attention to detail and organizational discipline",
+      "Ability to maintain confidentiality of internal deliberations",
+    ],
+    panelLooksFor: [
+      "Precision and thoroughness in documentation",
+      "Reliability and consistency in administrative duties",
+      "Ability to produce clear, structured, and useful records",
+      "Understanding of institutional memory and why it matters",
+      "Proactive approach to systems and processes",
+    ],
   },
   {
     title: "Technical Lead (Development)",
     mandate: "Build & Maintain",
-    description:
-      "Head the technical arm. Oversee digital infrastructure, platforms, repositories, deployments, and technical continuity. Ensure institutional ownership of all technical systems.",
+    purpose:
+      "Oversee technical direction, code quality, and engineering standards for all GDG Babcock projects. Mentor junior developers and ensure best practices.",
+    responsibilities: [
+      "Lead technical architecture decisions for community projects",
+      "Conduct code reviews and maintain engineering standards",
+      "Organize technical workshops and study sessions",
+      "Mentor members in software development practices",
+      "Coordinate with Google Developer Expert/GDE programs",
+    ],
+    requirements: [
+      "Demonstrated proficiency in at least 2 programming languages",
+      "Portfolio of completed projects (GitHub required)",
+      "Experience leading technical teams or projects",
+      "Strong understanding of software design patterns",
+    ],
+    panelLooksFor: [
+      "Technical competence and depth of knowledge",
+      "Ability to explain complex concepts clearly",
+      "Leadership experience and mentoring capability",
+      "Alignment with GDG community values",
+    ],
   },
   {
     title: "Technical Lead (Tracks)",
     mandate: "Teach & Develop",
-    description:
-      "Head the learning and curriculum function. Oversee technical tracks, workshops, and structured learning programs. Supervise Track Leads and ensure quality delivery.",
+    purpose:
+      "Head the learning and curriculum function. Design, structure, and oversee all technical tracks, workshops, and learning programs to develop members' skills systematically.",
+    responsibilities: [
+      "Design curriculum and learning paths for each technical track",
+      "Recruit, supervise, and support Track Leads across all active tracks",
+      "Schedule and quality-assure all workshop sessions and study groups",
+      "Track member progress and skill development outcomes",
+      "Coordinate with the Technical Lead (Development) on project-based learning",
+      "Evaluate and adopt new learning tools, platforms, and methodologies",
+    ],
+    requirements: [
+      "Teaching or tutoring experience in a technical domain",
+      "Proficiency in at least two technical tracks offered by the Chapter",
+      "Experience designing structured learning materials or curricula",
+      "Strong communication and public speaking skills",
+      "Familiarity with Google technologies and developer tools",
+    ],
+    panelLooksFor: [
+      "Passion for education and developing others",
+      "Ability to break down complex topics for diverse skill levels",
+      "Organizational skills and curriculum design thinking",
+      "Track record of mentoring or teaching",
+      "Understanding of community-driven learning models",
+    ],
   },
   {
     title: "Programs Lead",
     mandate: "Plan & Execute",
-    description:
-      "Head events and major activations. Oversee ORBIT, GDG Week, and all flagship programs. Coordinate timelines, logistics, and post-event review.",
+    purpose:
+      "Head events and major activations. Oversee ORBIT, GDG Week, and all flagship programs. Coordinate timelines, logistics, venue, and post-event review to ensure world-class delivery.",
+    responsibilities: [
+      "Plan and execute all flagship programs (ORBIT, GDG Week, and special events)",
+      "Develop event timelines, budgets, and logistics plans",
+      "Coordinate venue bookings, equipment, and on-site operations",
+      "Manage event registration, attendance tracking, and feedback collection",
+      "Conduct post-event reviews and document learnings for institutional memory",
+      "Collaborate with Partnerships Lead on sponsorship deliverables at events",
+    ],
+    requirements: [
+      "Proven event planning or project management experience",
+      "Strong organizational and logistics coordination skills",
+      "Ability to manage budgets and work within resource constraints",
+      "Experience managing teams or volunteer coordination",
+      "Calm and decisive under high-pressure, live-event scenarios",
+    ],
+    panelLooksFor: [
+      "Execution discipline and attention to detail",
+      "Creative event design and audience experience thinking",
+      "Ability to manage timelines and deliver on schedule",
+      "Composure and problem-solving in real-time",
+      "Collaborative spirit with cross-functional teams",
+    ],
   },
   {
     title: "Community Lead",
     mandate: "Engage & Support",
-    description:
-      "Head member engagement and internal community life. Oversee onboarding, retention, the monthly meetup, team welfare, and at least one non-work team activity per month.",
+    purpose:
+      "Build and sustain an inclusive, engaged developer community. Ensure member satisfaction and coordinate community-building initiatives.",
+    responsibilities: [
+      "Plan and execute community engagement activities",
+      "Maintain member database and communication channels",
+      "Coordinate onboarding for new community members",
+      "Gather feedback and address community concerns",
+      "Organize networking events and socials",
+    ],
+    requirements: [
+      "Proven interpersonal and organizational skills",
+      "Experience planning events or managing communities",
+      "Strong understanding of GDG values and culture",
+      "Excellent written and verbal communication",
+    ],
+    panelLooksFor: [
+      "Empathy and people-first approach",
+      "Organizational capacity and attention to detail",
+      "Understanding of community dynamics",
+      "Commitment to inclusivity and diversity",
+    ],
   },
   {
     title: "Media Lead",
     mandate: "Document & Recognize",
-    description:
-      "Head editorial, documentation, and archives. Oversee RADAR, all publication outputs, and recognition products including the Babcock 100.",
+    purpose:
+      "Manage all external communications, social media presence, and brand representation for GDG Babcock. Create compelling content that engages the community.",
+    responsibilities: [
+      "Develop and execute social media strategy across platforms",
+      "Create visual and written content for events and initiatives",
+      "Manage GDG Babcock's brand identity and guidelines",
+      "Coordinate with photography and videography team",
+      "Track engagement metrics and optimize content performance",
+    ],
+    requirements: [
+      "Portfolio demonstrating design and content creation skills",
+      "Experience with social media management",
+      "Proficiency in design tools (Figma, Canva, Adobe Suite)",
+      "Strong written and visual communication skills",
+    ],
+    panelLooksFor: [
+      "Quality and creativity of portfolio work",
+      "Understanding of brand strategy and audience engagement",
+      "Reliability and consistency in content delivery",
+      "Collaboration skills with cross-functional teams",
+    ],
   },
   {
     title: "Marketing Lead",
     mandate: "Promote & Grow",
-    description:
-      "Head communications, promotion, and audience growth. Oversee visibility strategies, campaign calendars, brand consistency, and distribution across all channels.",
+    purpose:
+      "Head communications, promotion, and audience growth. Oversee visibility strategies, campaign calendars, brand consistency, and distribution across all channels to grow the Chapter's reach.",
+    responsibilities: [
+      "Develop and execute marketing campaigns for all Chapter programs and initiatives",
+      "Manage the campaign calendar and ensure timely promotion of events",
+      "Grow the Chapter's audience across social media, WhatsApp, and campus channels",
+      "Maintain brand consistency across all public-facing materials",
+      "Analyze reach, engagement, and conversion metrics to optimize strategies",
+      "Coordinate with Media Lead on content alignment and distribution",
+    ],
+    requirements: [
+      "Experience in marketing, advertising, or audience growth",
+      "Understanding of social media algorithms and content distribution",
+      "Proficiency with analytics tools (Instagram Insights, Google Analytics, or similar)",
+      "Strong copywriting skills and ability to craft compelling messaging",
+      "Creative thinking and campaign ideation capability",
+    ],
+    panelLooksFor: [
+      "Strategic marketing thinking and data-driven approach",
+      "Demonstrated ability to grow audiences or drive engagement",
+      "Creativity in campaign design and messaging",
+      "Understanding of the GDG brand and target audience",
+      "Consistency and reliability in execution",
+    ],
   },
   {
     title: "Partnerships Lead",
     mandate: "Connect & Sustain",
-    description:
-      "Head sponsorship, external relations, and alumni coordination. Maintain partner and alumni records, support the resource needs of major initiatives, and oversee alumni engagement.",
+    purpose:
+      "Head sponsorship, external relations, and alumni coordination. Build and maintain strategic partnerships, support the resource needs of major initiatives, and sustain long-term relationships.",
+    responsibilities: [
+      "Identify, approach, and negotiate with potential sponsors and partners",
+      "Maintain a partner and alumni database with current contact and engagement records",
+      "Support the resource needs of ORBIT, GDG Week, and other major programs",
+      "Coordinate alumni engagement initiatives including mentorship and guest appearances",
+      "Prepare partnership proposals, MOUs, and deliverable reports",
+      "Represent the Chapter in external stakeholder meetings alongside the Organizer",
+    ],
+    requirements: [
+      "Strong interpersonal and negotiation skills",
+      "Experience in business development, fundraising, or partnership management",
+      "Professional written communication and proposal writing ability",
+      "Understanding of sponsorship structures and value exchange",
+      "Ability to maintain long-term professional relationships",
+    ],
+    panelLooksFor: [
+      "Confidence and professionalism in external-facing interactions",
+      "Strategic thinking about partnership value and mutual benefit",
+      "Track record of building or maintaining professional relationships",
+      "Resourcefulness and initiative in securing support",
+      "Alignment with the Chapter's institutional values and mission",
+    ],
   },
 ]
 
@@ -432,8 +643,8 @@ export default function ApplyPage() {
             </div>
 
             {/* Role Detail */}
-            <div className="p-8 md:p-12 flex flex-col justify-center min-h-[400px]">
-              <div className="mb-6">
+            <div className="p-8 md:p-10 flex flex-col min-h-[400px] max-h-[600px] overflow-y-auto">
+              <div className="mb-4">
                 <span
                   className="inline-block w-3 h-3 rounded-full mr-3"
                   style={{ backgroundColor: GOOGLE_COLORS[activeRole % 4] }}
@@ -442,16 +653,75 @@ export default function ApplyPage() {
                   Office {String(activeRole + 1).padStart(2, "0")} of 10
                 </span>
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold tracking-tight mb-2">
+              <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-1">
                 {EXECUTIVE_ROLES[activeRole].title}
               </h3>
-              <p className="text-lg text-[#444444] font-medium mb-6">
+              <p className="text-base text-[#444444] font-medium mb-5">
                 {EXECUTIVE_ROLES[activeRole].mandate}
               </p>
-              <p className="text-base text-[#2D2D2D] leading-relaxed max-w-xl">
-                {EXECUTIVE_ROLES[activeRole].description}
-              </p>
-              <div className="mt-8">
+
+              {/* Purpose */}
+              <div className="mb-6">
+                <h4 className="text-xs font-mono text-[#6B6B6B] uppercase tracking-wider mb-2 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: GOOGLE_COLORS[activeRole % 4] }} />
+                  Purpose
+                </h4>
+                <p className="text-sm text-[#2D2D2D] leading-relaxed">
+                  {EXECUTIVE_ROLES[activeRole].purpose}
+                </p>
+              </div>
+
+              {/* Key Responsibilities */}
+              <div className="mb-6">
+                <h4 className="text-xs font-mono text-[#6B6B6B] uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: GOOGLE_COLORS[(activeRole + 1) % 4] }} />
+                  Key Responsibilities
+                </h4>
+                <div className="space-y-2">
+                  {EXECUTIVE_ROLES[activeRole].responsibilities.map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 text-sm text-[#2D2D2D]">
+                      <span className="flex items-center justify-center w-5 h-5 rounded-full border border-[#E8DFC8] text-[10px] font-mono text-[#6B6B6B] shrink-0 mt-0.5">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="leading-relaxed">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Requirements */}
+              <div className="mb-6">
+                <h4 className="text-xs font-mono text-[#6B6B6B] uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: GOOGLE_COLORS[(activeRole + 2) % 4] }} />
+                  Requirements
+                </h4>
+                <div className="space-y-2">
+                  {EXECUTIVE_ROLES[activeRole].requirements.map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 text-sm text-[#2D2D2D]">
+                      <span className="w-4 h-4 rounded border border-[#D0C9B8] shrink-0 mt-0.5" />
+                      <span className="leading-relaxed">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* What the Panel Looks For */}
+              <div className="mb-6">
+                <h4 className="text-xs font-mono text-[#6B6B6B] uppercase tracking-wider mb-3 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: GOOGLE_COLORS[(activeRole + 3) % 4] }} />
+                  What the Panel Looks For
+                </h4>
+                <div className="space-y-1.5">
+                  {EXECUTIVE_ROLES[activeRole].panelLooksFor.map((item, i) => (
+                    <div key={i} className="flex items-start gap-3 text-sm text-[#2D2D2D]">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#0F0F0F] shrink-0 mt-[7px]" />
+                      <span className="leading-relaxed">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-auto pt-4">
                 <Button asChild className="bg-[#0F0F0F] text-[#FFF6E0] hover:bg-[#2D2D2D] rounded-full px-6 text-sm">
                   <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3UlgM7xfHFeeA05SoPdBK_-a3l3ZG-VTOztDCA9iaBEvQUw/viewform?usp=header" target="_blank" rel="noopener noreferrer">
                     Apply for this role →

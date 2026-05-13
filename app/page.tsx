@@ -467,7 +467,7 @@ export default function ApplyPage() {
   const [isExpired, setIsExpired] = useState(false)
 
   useEffect(() => {
-    const targetDate = new Date("2026-05-12T23:59:59")
+    const targetDate = new Date("2026-05-17T23:59:59")
     const timer = setInterval(() => {
       const now = new Date().getTime()
       const distance = targetDate.getTime() - now

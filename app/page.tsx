@@ -526,7 +526,7 @@ export default function ApplyPage() {
             GDG on Campus Babcock is selecting its next Executive Leadership.
             We are looking for ten people who understand that office is for
             responsibility, not prestige.
-            <span className="block mt-3 text-base font-mono text-[#6B6B6B]">Applications open May 5 – May 12, 2026</span>
+            <span className="block mt-3 text-base font-mono text-[#6B6B6B]">Applications open May 5 – May 17, 2026</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-300">
             <Button asChild className="bg-[#0F0F0F] text-[#FFF6E0] hover:bg-[#2D2D2D] rounded-full px-8 py-6 text-base font-medium">
@@ -884,7 +884,7 @@ export default function ApplyPage() {
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-[#FFF6E0]/40 font-mono mb-12">Applications close May 12, 2026 at 11:59 PM</p>
+              <p className="text-sm text-[#FFF6E0]/40 font-mono mb-12">Applications close May 17, 2026 at 11:59 PM</p>
             </>
           )}
 

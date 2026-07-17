@@ -235,87 +235,6 @@ const DEV_TEAM_ROLES = [
       "Curiosity about the intersection of design and code",
     ],
   },
-  {
-    title: "Full-Stack Developer",
-    mandate: "Deliver End-to-End",
-    purpose:
-      "Work across the entire stack to deliver complete features. Bridge frontend and backend concerns, own features from database to UI, and unblock teammates wherever needed.",
-    responsibilities: [
-      "Deliver complete features end-to-end — from database schema to UI component",
-      "Jump between frontend and backend as needed to keep projects moving",
-      "Review PRs across the stack and provide constructive, context-aware feedback",
-      "Prototype quickly to validate ideas before investing in polished implementation",
-      "Mentor team members who are stronger on one side of the stack",
-      "Contribute to architectural decisions that span the full application",
-    ],
-    requirements: [
-      "Comfortable with both frontend (React, HTML/CSS) and backend (APIs, databases)",
-      "Understanding of how the full web stack connects — DNS to database",
-      "Experience shipping a project from idea to production",
-      "Strong debugging skills — you can trace a bug through multiple layers",
-    ],
-    panelLooksFor: [
-      "Breadth of knowledge across the stack — depth in at least one area",
-      "Shipping track record — projects that are live, not just local",
-      "Adaptability — comfortable jumping into unfamiliar code or tools",
-      "Teaching ability — you lift others up as you move across the stack",
-      "Pragmatism — you choose the right tool for the problem, not the trendiest",
-    ],
-  },
-  {
-    title: "Mobile Developer",
-    mandate: "Go Where Users Are",
-    purpose:
-      "Build and maintain mobile experiences for GDG Babcock products. Extend community tools to iOS and Android, ensuring native-quality performance and a seamless user experience on every device.",
-    responsibilities: [
-      "Build and maintain mobile apps for community products using Flutter or React Native",
-      "Ensure smooth cross-platform performance on both iOS and Android",
-      "Integrate mobile apps with backend APIs and handle offline/connectivity edge cases",
-      "Publish and manage app store listings (Google Play, Apple App Store)",
-      "Collaborate with UI/UX Designers on mobile-specific interaction patterns",
-      "Stay current with mobile platform updates and ecosystem changes",
-    ],
-    requirements: [
-      "Experience with Flutter, React Native, or native mobile development",
-      "Understanding of mobile UI patterns and platform conventions",
-      "Familiarity with state management approaches (Riverpod, Redux, or similar)",
-      "A published or side-project app is a strong plus",
-    ],
-    panelLooksFor: [
-      "Quality of mobile work — published apps, APKs, or prototypes",
-      "Platform awareness — you understand iOS and Android differences",
-      "Performance sensitivity — jank, load time, battery impact matter to you",
-      "User empathy — you think about who uses the app and in what context",
-      "Initiative — you spot mobile opportunities in existing products",
-    ],
-  },
-  {
-    title: "Technical Writer",
-    mandate: "Document Everything",
-    purpose:
-      "Create and maintain clear, useful documentation across all GDG Babcock products. Write API references, onboarding guides, tutorials, and technical articles that make the team and community smarter.",
-    responsibilities: [
-      "Write and maintain API documentation, setup guides, and architecture overviews",
-      "Create onboarding materials and quickstart guides for new contributors",
-      "Author technical articles for RADAR — tutorials, post-mortems, deep dives",
-      "Review and improve existing documentation for clarity, accuracy, and completeness",
-      "Collaborate with developers to document features as they're built",
-      "Establish and enforce documentation standards and templates across projects",
-    ],
-    requirements: [
-      "Strong written communication skills — clear, concise, and well-structured",
-      "Ability to understand and explain technical concepts to different audiences",
-      "Familiarity with Markdown, static site generators, or docs platforms",
-      "Experience writing tutorials, guides, or technical blog posts",
-    ],
-    panelLooksFor: [
-      "Quality of writing samples — tutorials, blog posts, READMEs, or guides",
-      "Ability to learn unfamiliar technical topics and explain them clearly",
-      "Organizational thinking — you structure information for findability",
-      "Empathy for the reader — you anticipate confusion and address it upfront",
-      "Consistency and attention to detail in written work",
-    ],
-  },
 ]
 
 const PRODUCTS = [
@@ -412,7 +331,7 @@ export default function ApplyPage() {
   const [isExpired, setIsExpired] = useState(false)
 
   useEffect(() => {
-    const targetDate = new Date("2026-07-24T18:00:00")
+    const targetDate = new Date(2026, 6, 24, 18, 0, 0) // July 24, 2026 6:00 PM local time
     const timer = setInterval(() => {
       const now = new Date().getTime()
       const distance = targetDate.getTime() - now
@@ -444,13 +363,13 @@ export default function ApplyPage() {
             <a href="#products" className="hover:opacity-60 transition-opacity">Products</a>
             <a href="#process" className="hover:opacity-60 transition-opacity">Process</a>
             <Button asChild className="bg-[#0F0F0F] text-[#FFF6E0] hover:bg-[#2D2D2D] rounded-full px-6 text-sm">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHAHvOfQJ7BSfGyes-RT8rJEKh-ugXHj1otWpf6hd-uyKiGg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
                 Apply Now
               </a>
             </Button>
           </div>
           <Button asChild className="md:hidden bg-[#0F0F0F] text-[#FFF6E0] hover:bg-[#2D2D2D] rounded-full px-5 text-sm">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHAHvOfQJ7BSfGyes-RT8rJEKh-ugXHj1otWpf6hd-uyKiGg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
               Apply
             </a>
           </Button>
@@ -475,7 +394,7 @@ export default function ApplyPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-300">
             <Button asChild className="bg-[#0F0F0F] text-[#FFF6E0] hover:bg-[#2D2D2D] rounded-full px-8 py-6 text-base font-medium">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHAHvOfQJ7BSfGyes-RT8rJEKh-ugXHj1otWpf6hd-uyKiGg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
                 Apply Now
               </a>
             </Button>
@@ -554,7 +473,7 @@ export default function ApplyPage() {
             <GoogleDots className="mb-4" />
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Dev Team Roles</h2>
             <p className="text-lg text-[#444444] max-w-2xl">
-              Eight roles. Each with a clear focus, real products to build, and a team to collaborate with.
+              Each role has a clear focus, real products to build, and a team to collaborate with.
             </p>
           </div>
 
@@ -595,7 +514,7 @@ export default function ApplyPage() {
                   style={{ backgroundColor: GOOGLE_COLORS[activeRole % 4] }}
                 />
                 <span className="text-sm font-mono text-[#444444] tracking-wider uppercase">
-                  Role {String(activeRole + 1).padStart(2, "0")} of 08
+                  Role {String(activeRole + 1).padStart(2, "0")} of 05
                 </span>
               </div>
               <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-1">
@@ -668,7 +587,7 @@ export default function ApplyPage() {
 
               <div className="mt-auto pt-4">
                 <Button asChild className="bg-[#0F0F0F] text-[#FFF6E0] hover:bg-[#2D2D2D] rounded-full px-6 text-sm">
-                  <a href="#" target="_blank" rel="noopener noreferrer">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHAHvOfQJ7BSfGyes-RT8rJEKh-ugXHj1otWpf6hd-uyKiGg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
                     Apply for this role →
                   </a>
                 </Button>
@@ -835,7 +754,7 @@ export default function ApplyPage() {
 
           {!isExpired && (
             <Button asChild className="bg-[#FFF6E0] text-[#0F0F0F] hover:bg-white rounded-full px-10 py-6 text-base font-bold">
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHAHvOfQJ7BSfGyes-RT8rJEKh-ugXHj1otWpf6hd-uyKiGg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
                 Submit Your Application
               </a>
             </Button>

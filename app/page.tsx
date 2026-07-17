@@ -36,10 +36,10 @@ function SectionReveal({ children }: { children: React.ReactNode }) {
 }
 
 const HERO_MESSAGES = [
-  "Build products that outlast your tenure.",
-  "Lead with responsibility, not prestige.",
-  "Ship code the whole campus relies on.",
-  "Create opportunities across every department.",
+  "Build products the whole campus uses.",
+  "Ship code that outlasts your degree.",
+  "Create tools that serve every department.",
+  "Learn by building, not just watching.",
 ]
 
 const TYPEWRITER_COLOR = "#6B6B6B"
@@ -99,276 +99,221 @@ function RotatingTypewriter() {
   )
 }
 
-const EXECUTIVE_ROLES = [
+const DEV_TEAM_ROLES = [
   {
-    title: "Organizer / President",
-    mandate: "Lead the Chapter",
+    title: "Frontend Developer",
+    mandate: "Build Interfaces",
     purpose:
-      "Serve as the principal leader and public representative of GDG on Campus Babcock. Provide strategic direction, chair executive meetings, and ensure institutional integrity across the tenure.",
+      "Build and maintain the user-facing side of GDG Babcock's products. Translate designs into responsive, accessible, and performant interfaces that serve the entire campus community.",
     responsibilities: [
-      "Set and communicate the Chapter's strategic vision and priorities",
-      "Chair all Executive Council meetings and represent the Chapter externally",
-      "Oversee all offices and ensure alignment with constitutional mandates",
-      "Maintain official relationship with Google Developer Groups program and university administration",
-      "Lead crisis resolution and final decision-making on unresolved matters",
-      "Ensure smooth leadership transitions and institutional continuity",
+      "Build and maintain UI for community products (GDG Site, BabcockVotes, RADAR, Babcock 100, Apply Portal)",
+      "Translate Figma designs into pixel-perfect, responsive components using React and Next.js",
+      "Ensure cross-browser compatibility, accessibility, and performance across all products",
+      "Collaborate with UI/UX Designers to refine user flows and interaction patterns",
+      "Write reusable component libraries and maintain frontend documentation",
+      "Review frontend PRs and mentor junior contributors on best practices",
     ],
     requirements: [
-      "Prior leadership experience in a structured organization",
-      "Deep understanding of GDG on Campus Babcock's mission, products, and governance",
-      "Strong public speaking and stakeholder communication skills",
-      "Demonstrated ability to lead cross-functional teams",
-      "Minimum one year of active participation in the community",
+      "Experience with React, Next.js, or similar frontend frameworks",
+      "Working knowledge of HTML, CSS, and TypeScript",
+      "Understanding of responsive design and accessibility principles",
+      "Familiarity with Tailwind CSS or similar utility-first frameworks",
     ],
     panelLooksFor: [
-      "Strategic thinking and long-term vision",
-      "Ability to inspire and unite diverse teams",
-      "Composure under pressure and sound judgment",
-      "Institutional mindset — building beyond personal tenure",
-      "Alignment with GDG community values",
+      "Quality of past UI work — live sites, components, or side projects",
+      "Attention to visual detail and user experience intuition",
+      "Ability to articulate design-to-code decisions",
+      "Eagerness to learn and adopt new frontend tools",
+      "Collaborative mindset — open to design feedback and iteration",
     ],
   },
   {
-    title: "Vice-President",
-    mandate: "Coordinate & Align",
+    title: "Backend Developer",
+    mandate: "Power the Platform",
     purpose:
-      "Serve as the principal deputy. Coordinate strategic internal administration, monitor accountability across all offices, and chair the Extended Leadership Council.",
+      "Design, build, and maintain the server-side logic, APIs, and databases that power GDG Babcock's applications. Ensure data integrity, security, and reliable performance at scale.",
     responsibilities: [
-      "Coordinate day-to-day operations and ensure cross-office alignment",
-      "Monitor delivery timelines and accountability across all executive offices",
-      "Chair the Extended Leadership Council and manage its agenda",
-      "Step in as acting Organizer when the President is unavailable",
-      "Oversee internal governance processes including performance reviews",
-      "Mediate inter-office conflicts and escalate unresolved issues to the Organizer",
+      "Design and build RESTful or GraphQL APIs for community applications",
+      "Model and manage databases, write migrations, and optimize queries",
+      "Implement authentication, authorization, and data validation logic",
+      "Write integration and unit tests; maintain API documentation",
+      "Monitor server performance, debug production issues, and optimize bottlenecks",
+      "Collaborate with Frontend and DevOps engineers on end-to-end feature delivery",
     ],
     requirements: [
-      "Prior experience in operational coordination or project management",
-      "Strong organizational and time management skills",
-      "Working knowledge of all ten executive offices and their mandates",
-      "Demonstrated ability to hold peers accountable without damaging relationships",
-      "Active participation in the community for at least one semester",
+      "Experience with Node.js, Python, or similar backend languages",
+      "Working knowledge of databases (PostgreSQL, MongoDB, or similar)",
+      "Understanding of REST API design and HTTP fundamentals",
+      "Familiarity with version control and collaborative development workflows",
     ],
     panelLooksFor: [
-      "Operational awareness and attention to detail",
-      "Diplomatic communication and conflict resolution skills",
-      "Ability to manage multiple moving parts simultaneously",
-      "Understanding of institutional accountability systems",
-      "Commitment to team cohesion and shared success",
+      "Ability to reason about data models and API design trade-offs",
+      "Attention to security — input validation, auth patterns, safe defaults",
+      "Debugging discipline — methodical approach to tracing issues",
+      "Understanding of how backend choices affect frontend and product experience",
+      "Willingness to document and communicate technical decisions",
     ],
   },
   {
-    title: "General Secretary",
-    mandate: "Record & Administer",
+    title: "AI/ML Engineer",
+    mandate: "Ship Intelligence",
     purpose:
-      "Serve as the official record-keeper and administrative backbone of the Chapter. Maintain minutes, prepare agendas, manage the asset register, and ensure orderly handover of all Chapter property.",
+      "Integrate AI-powered features into GDG Babcock products. Work with LLMs, embeddings, RAG pipelines, and agent frameworks to build tools that solve real problems for the campus community.",
     responsibilities: [
-      "Record minutes of all Executive Council and Extended Leadership Council meetings",
-      "Prepare and circulate meeting agendas at least 24 hours in advance",
-      "Maintain the Chapter's official asset register (physical and digital)",
-      "Coordinate and document the handover process at each leadership transition",
-      "Manage official correspondence and internal communication logs",
-      "Ensure all governance documents are current, accessible, and properly archived",
+      "Build and deploy AI-powered features (chatbots, search, recommendations) for community products",
+      "Experiment with LLM APIs, RAG architectures, and agent frameworks",
+      "Prototype AI tools for internal workflows — content generation, data analysis, automation",
+      "Stay current with the AI ecosystem and share learnings with the team",
+      "Collaborate on StudySmart, Chatbothon, and other AI-focused initiatives",
+      "Write clear documentation for AI features and contribute to internal knowledge base",
     ],
     requirements: [
-      "Excellent written communication and documentation skills",
-      "Experience with record-keeping, note-taking, or administrative roles",
-      "Proficiency with productivity tools (Google Workspace, Notion, or similar)",
-      "Strong attention to detail and organizational discipline",
-      "Ability to maintain confidentiality of internal deliberations",
+      "Familiarity with LLM APIs (Gemini, OpenAI, or similar)",
+      "Basic understanding of prompt engineering, embeddings, and retrieval concepts",
+      "Comfortable with Python or JavaScript for prototyping",
+      "Curiosity-driven — you experiment with new AI tools and share what you find",
     ],
     panelLooksFor: [
-      "Precision and thoroughness in documentation",
-      "Reliability and consistency in administrative duties",
-      "Ability to produce clear, structured, and useful records",
-      "Understanding of institutional memory and why it matters",
-      "Proactive approach to systems and processes",
+      "Evidence of AI experimentation — side projects, notebooks, prototypes",
+      "Ability to separate hype from practical utility",
+      "Creative problem-solving — finding where AI genuinely adds value",
+      "Ethical awareness — bias, safety, and responsible deployment",
+      "Communication skills — can explain AI concepts to non-technical teammates",
     ],
   },
   {
-    title: "Technical Lead (Development)",
-    mandate: "Build & Maintain",
+    title: "DevOps/Cloud Engineer",
+    mandate: "Keep It Running",
     purpose:
-      "Oversee technical direction, code quality, and engineering standards for all GDG Babcock projects. Mentor junior developers and ensure best practices.",
+      "Own deployment pipelines, cloud infrastructure, and observability for all GDG Babcock products. Ensure fast, reliable, and secure delivery of every service the community depends on.",
     responsibilities: [
-      "Lead technical architecture decisions for community projects",
-      "Conduct code reviews and maintain engineering standards",
-      "Organize technical workshops and study sessions",
-      "Mentor members in software development practices",
-      "Coordinate with Google Developer Expert/GDE programs",
+      "Set up and maintain CI/CD pipelines for all community projects",
+      "Manage cloud infrastructure (Vercel, GCP, or similar) and domain/DNS configuration",
+      "Implement monitoring, alerting, and logging for production applications",
+      "Automate repetitive operational tasks and document runbooks",
+      "Conduct security reviews of deployment configurations and access controls",
+      "Support the dev team with environment setup and troubleshooting",
     ],
     requirements: [
-      "Demonstrated proficiency in at least 2 programming languages",
-      "Portfolio of completed projects (GitHub required)",
-      "Experience leading technical teams or projects",
-      "Strong understanding of software design patterns",
+      "Familiarity with cloud platforms (GCP, AWS, Vercel, or similar)",
+      "Understanding of CI/CD concepts and Git-based workflows",
+      "Basic knowledge of Linux, shell scripting, and networking fundamentals",
+      "Experience with Docker or containerization is a plus",
     ],
     panelLooksFor: [
-      "Technical competence and depth of knowledge",
-      "Ability to explain complex concepts clearly",
-      "Leadership experience and mentoring capability",
-      "Alignment with GDG community values",
+      "Systems thinking — you see how deployment, infra, and code connect",
+      "Automation instinct — if you do it twice, you script it",
+      "Security consciousness — least privilege, secret management, safe defaults",
+      "Calm under pressure — production incidents don't rattle you",
+      "Documentation habit — runbooks, setup guides, post-mortems",
     ],
   },
   {
-    title: "Technical Lead (Tracks)",
-    mandate: "Teach & Develop",
+    title: "UI/UX Designer",
+    mandate: "Design the Experience",
     purpose:
-      "Head the learning and curriculum function. Design, structure, and oversee all technical tracks, workshops, and learning programs to develop members' skills systematically.",
+      "Own the visual and interaction design of GDG Babcock's products. Conduct user research, create design systems, and ensure every product is intuitive, accessible, and beautiful.",
     responsibilities: [
-      "Design curriculum and learning paths for each technical track",
-      "Recruit, supervise, and support Track Leads across all active tracks",
-      "Schedule and quality-assure all workshop sessions and study groups",
-      "Track member progress and skill development outcomes",
-      "Coordinate with the Technical Lead (Development) on project-based learning",
-      "Evaluate and adopt new learning tools, platforms, and methodologies",
+      "Design user flows, wireframes, and high-fidelity mockups in Figma",
+      "Build and maintain a shared design system used across all community products",
+      "Conduct user research, usability testing, and iterate based on feedback",
+      "Collaborate with Frontend Developers to ensure design fidelity in implementation",
+      "Design for accessibility — color contrast, keyboard navigation, screen readers",
+      "Lead design critiques and contribute to the visual identity of the GDG Babcock brand",
     ],
     requirements: [
-      "Teaching or tutoring experience in a technical domain",
-      "Proficiency in at least two technical tracks offered by the Chapter",
-      "Experience designing structured learning materials or curricula",
-      "Strong communication and public speaking skills",
-      "Familiarity with Google technologies and developer tools",
+      "Proficiency with Figma (components, auto-layout, prototyping)",
+      "Portfolio demonstrating UI/UX work — even personal or speculative projects",
+      "Understanding of design fundamentals — typography, color, spacing, hierarchy",
+      "Familiarity with accessibility standards (WCAG) is a strong plus",
     ],
     panelLooksFor: [
-      "Passion for education and developing others",
-      "Ability to break down complex topics for diverse skill levels",
-      "Organizational skills and curriculum design thinking",
-      "Track record of mentoring or teaching",
-      "Understanding of community-driven learning models",
+      "Quality and thoughtfulness of design portfolio",
+      "User-centered thinking — you design for people, not aesthetics alone",
+      "Ability to give and receive constructive design feedback",
+      "Systems thinking — reusable components over one-off designs",
+      "Curiosity about the intersection of design and code",
     ],
   },
   {
-    title: "Programs Lead",
-    mandate: "Plan & Execute",
+    title: "Full-Stack Developer",
+    mandate: "Deliver End-to-End",
     purpose:
-      "Head events and major activations. Oversee ORBIT, GDG Week, and all flagship programs. Coordinate timelines, logistics, venue, and post-event review to ensure world-class delivery.",
+      "Work across the entire stack to deliver complete features. Bridge frontend and backend concerns, own features from database to UI, and unblock teammates wherever needed.",
     responsibilities: [
-      "Plan and execute all flagship programs (ORBIT, GDG Week, and special events)",
-      "Develop event timelines, budgets, and logistics plans",
-      "Coordinate venue bookings, equipment, and on-site operations",
-      "Manage event registration, attendance tracking, and feedback collection",
-      "Conduct post-event reviews and document learnings for institutional memory",
-      "Collaborate with Partnerships Lead on sponsorship deliverables at events",
+      "Deliver complete features end-to-end — from database schema to UI component",
+      "Jump between frontend and backend as needed to keep projects moving",
+      "Review PRs across the stack and provide constructive, context-aware feedback",
+      "Prototype quickly to validate ideas before investing in polished implementation",
+      "Mentor team members who are stronger on one side of the stack",
+      "Contribute to architectural decisions that span the full application",
     ],
     requirements: [
-      "Proven event planning or project management experience",
-      "Strong organizational and logistics coordination skills",
-      "Ability to manage budgets and work within resource constraints",
-      "Experience managing teams or volunteer coordination",
-      "Calm and decisive under high-pressure, live-event scenarios",
+      "Comfortable with both frontend (React, HTML/CSS) and backend (APIs, databases)",
+      "Understanding of how the full web stack connects — DNS to database",
+      "Experience shipping a project from idea to production",
+      "Strong debugging skills — you can trace a bug through multiple layers",
     ],
     panelLooksFor: [
-      "Execution discipline and attention to detail",
-      "Creative event design and audience experience thinking",
-      "Ability to manage timelines and deliver on schedule",
-      "Composure and problem-solving in real-time",
-      "Collaborative spirit with cross-functional teams",
+      "Breadth of knowledge across the stack — depth in at least one area",
+      "Shipping track record — projects that are live, not just local",
+      "Adaptability — comfortable jumping into unfamiliar code or tools",
+      "Teaching ability — you lift others up as you move across the stack",
+      "Pragmatism — you choose the right tool for the problem, not the trendiest",
     ],
   },
   {
-    title: "Community Lead",
-    mandate: "Engage & Support",
+    title: "Mobile Developer",
+    mandate: "Go Where Users Are",
     purpose:
-      "Build and sustain an inclusive, engaged developer community. Ensure member satisfaction and coordinate community-building initiatives.",
+      "Build and maintain mobile experiences for GDG Babcock products. Extend community tools to iOS and Android, ensuring native-quality performance and a seamless user experience on every device.",
     responsibilities: [
-      "Plan and execute community engagement activities",
-      "Maintain member database and communication channels",
-      "Coordinate onboarding for new community members",
-      "Gather feedback and address community concerns",
-      "Organize networking events and socials",
+      "Build and maintain mobile apps for community products using Flutter or React Native",
+      "Ensure smooth cross-platform performance on both iOS and Android",
+      "Integrate mobile apps with backend APIs and handle offline/connectivity edge cases",
+      "Publish and manage app store listings (Google Play, Apple App Store)",
+      "Collaborate with UI/UX Designers on mobile-specific interaction patterns",
+      "Stay current with mobile platform updates and ecosystem changes",
     ],
     requirements: [
-      "Proven interpersonal and organizational skills",
-      "Experience planning events or managing communities",
-      "Strong understanding of GDG values and culture",
-      "Excellent written and verbal communication",
+      "Experience with Flutter, React Native, or native mobile development",
+      "Understanding of mobile UI patterns and platform conventions",
+      "Familiarity with state management approaches (Riverpod, Redux, or similar)",
+      "A published or side-project app is a strong plus",
     ],
     panelLooksFor: [
-      "Empathy and people-first approach",
-      "Organizational capacity and attention to detail",
-      "Understanding of community dynamics",
-      "Commitment to inclusivity and diversity",
+      "Quality of mobile work — published apps, APKs, or prototypes",
+      "Platform awareness — you understand iOS and Android differences",
+      "Performance sensitivity — jank, load time, battery impact matter to you",
+      "User empathy — you think about who uses the app and in what context",
+      "Initiative — you spot mobile opportunities in existing products",
     ],
   },
   {
-    title: "Media Lead",
-    mandate: "Document & Recognize",
+    title: "Technical Writer",
+    mandate: "Document Everything",
     purpose:
-      "Manage all external communications, social media presence, and brand representation for GDG Babcock. Create compelling content that engages the community.",
+      "Create and maintain clear, useful documentation across all GDG Babcock products. Write API references, onboarding guides, tutorials, and technical articles that make the team and community smarter.",
     responsibilities: [
-      "Develop and execute social media strategy across platforms",
-      "Create visual and written content for events and initiatives",
-      "Manage GDG Babcock's brand identity and guidelines",
-      "Coordinate with photography and videography team",
-      "Track engagement metrics and optimize content performance",
+      "Write and maintain API documentation, setup guides, and architecture overviews",
+      "Create onboarding materials and quickstart guides for new contributors",
+      "Author technical articles for RADAR — tutorials, post-mortems, deep dives",
+      "Review and improve existing documentation for clarity, accuracy, and completeness",
+      "Collaborate with developers to document features as they're built",
+      "Establish and enforce documentation standards and templates across projects",
     ],
     requirements: [
-      "Portfolio demonstrating design and content creation skills",
-      "Experience with social media management",
-      "Proficiency in design tools (Figma, Canva, Adobe Suite)",
-      "Strong written and visual communication skills",
+      "Strong written communication skills — clear, concise, and well-structured",
+      "Ability to understand and explain technical concepts to different audiences",
+      "Familiarity with Markdown, static site generators, or docs platforms",
+      "Experience writing tutorials, guides, or technical blog posts",
     ],
     panelLooksFor: [
-      "Quality and creativity of portfolio work",
-      "Understanding of brand strategy and audience engagement",
-      "Reliability and consistency in content delivery",
-      "Collaboration skills with cross-functional teams",
-    ],
-  },
-  {
-    title: "Marketing Lead",
-    mandate: "Promote & Grow",
-    purpose:
-      "Head communications, promotion, and audience growth. Oversee visibility strategies, campaign calendars, brand consistency, and distribution across all channels to grow the Chapter's reach.",
-    responsibilities: [
-      "Develop and execute marketing campaigns for all Chapter programs and initiatives",
-      "Manage the campaign calendar and ensure timely promotion of events",
-      "Grow the Chapter's audience across social media, WhatsApp, and campus channels",
-      "Maintain brand consistency across all public-facing materials",
-      "Analyze reach, engagement, and conversion metrics to optimize strategies",
-      "Coordinate with Media Lead on content alignment and distribution",
-    ],
-    requirements: [
-      "Experience in marketing, advertising, or audience growth",
-      "Understanding of social media algorithms and content distribution",
-      "Proficiency with analytics tools (Instagram Insights, Google Analytics, or similar)",
-      "Strong copywriting skills and ability to craft compelling messaging",
-      "Creative thinking and campaign ideation capability",
-    ],
-    panelLooksFor: [
-      "Strategic marketing thinking and data-driven approach",
-      "Demonstrated ability to grow audiences or drive engagement",
-      "Creativity in campaign design and messaging",
-      "Understanding of the GDG brand and target audience",
-      "Consistency and reliability in execution",
-    ],
-  },
-  {
-    title: "Partnerships Lead",
-    mandate: "Connect & Sustain",
-    purpose:
-      "Head sponsorship, external relations, and alumni coordination. Build and maintain strategic partnerships, support the resource needs of major initiatives, and sustain long-term relationships.",
-    responsibilities: [
-      "Identify, approach, and negotiate with potential sponsors and partners",
-      "Maintain a partner and alumni database with current contact and engagement records",
-      "Support the resource needs of ORBIT, GDG Week, and other major programs",
-      "Coordinate alumni engagement initiatives including mentorship and guest appearances",
-      "Prepare partnership proposals, MOUs, and deliverable reports",
-      "Represent the Chapter in external stakeholder meetings alongside the Organizer",
-    ],
-    requirements: [
-      "Strong interpersonal and negotiation skills",
-      "Experience in business development, fundraising, or partnership management",
-      "Professional written communication and proposal writing ability",
-      "Understanding of sponsorship structures and value exchange",
-      "Ability to maintain long-term professional relationships",
-    ],
-    panelLooksFor: [
-      "Confidence and professionalism in external-facing interactions",
-      "Strategic thinking about partnership value and mutual benefit",
-      "Track record of building or maintaining professional relationships",
-      "Resourcefulness and initiative in securing support",
-      "Alignment with the Chapter's institutional values and mission",
+      "Quality of writing samples — tutorials, blog posts, READMEs, or guides",
+      "Ability to learn unfamiliar technical topics and explain them clearly",
+      "Organizational thinking — you structure information for findability",
+      "Empathy for the reader — you anticipate confusion and address it upfront",
+      "Consistency and attention to detail in written work",
     ],
   },
 ]
@@ -426,9 +371,9 @@ const PRODUCTS = [
 
 const TIMELINE = [
   { step: "01", label: "Applications Open", detail: "Submit your application through the form below" },
-  { step: "02", label: "Review & Interview", detail: "The Leadership Selection Panel reviews and interviews candidates" },
-  { step: "03", label: "Selection", detail: "Decisions recorded and communicated through official channels" },
-  { step: "04", label: "14-Day Handover", detail: "Structured transition with outgoing officers before assumption of office" },
+  { step: "02", label: "Review & Portfolio Check", detail: "Dev leads review applications, portfolios, and GitHub profiles" },
+  { step: "03", label: "Technical Interview", detail: "Short chat — walk us through your projects, interests, and what you want to learn" },
+  { step: "04", label: "Onboarding & Integration", detail: "Join the team, get repo access, meet your squad, and pick your first issue" },
 ]
 
 function GoogleDots({ className = "" }: { className?: string }) {
@@ -467,7 +412,7 @@ export default function ApplyPage() {
   const [isExpired, setIsExpired] = useState(false)
 
   useEffect(() => {
-    const targetDate = new Date("2026-05-15T23:59:59")
+    const targetDate = new Date("2026-07-24T18:00:00")
     const timer = setInterval(() => {
       const now = new Date().getTime()
       const distance = targetDate.getTime() - now
@@ -499,13 +444,13 @@ export default function ApplyPage() {
             <a href="#products" className="hover:opacity-60 transition-opacity">Products</a>
             <a href="#process" className="hover:opacity-60 transition-opacity">Process</a>
             <Button asChild className="bg-[#0F0F0F] text-[#FFF6E0] hover:bg-[#2D2D2D] rounded-full px-6 text-sm">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3UlgM7xfHFeeA05SoPdBK_-a3l3ZG-VTOztDCA9iaBEvQUw/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 Apply Now
               </a>
             </Button>
           </div>
           <Button asChild className="md:hidden bg-[#0F0F0F] text-[#FFF6E0] hover:bg-[#2D2D2D] rounded-full px-5 text-sm">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3UlgM7xfHFeeA05SoPdBK_-a3l3ZG-VTOztDCA9iaBEvQUw/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+            <a href="#" target="_blank" rel="noopener noreferrer">
               Apply
             </a>
           </Button>
@@ -518,19 +463,19 @@ export default function ApplyPage() {
           <div className="animate-fade-in-up">
             <div className="flex items-center gap-3 mb-8">
               <GoogleDots />
-              <span className="text-sm font-mono text-[#444444] tracking-wider uppercase">2026–2027 Leadership Transition</span>
+              <span className="text-sm font-mono text-[#444444] tracking-wider uppercase">2026 Dev Team Recruitment</span>
             </div>
           </div>
           <RotatingTypewriter />
           <p className="text-lg md:text-xl text-[#444444] max-w-2xl mb-12 leading-relaxed animate-fade-in-up animation-delay-200">
-            GDG on Campus Babcock is selecting its next Executive Leadership.
-            We are looking for ten people who understand that office is for
-            responsibility, not prestige.
-            <span className="block mt-3 text-base font-mono text-[#6B6B6B]">Applications open May 5 – May 15, 2026</span>
+            GDG on Campus Babcock is recruiting its next Dev Team.
+            We are looking for people who want to build, learn, and contribute
+            to products the whole campus relies on.
+            <span className="block mt-3 text-base font-mono text-[#6B6B6B]">Applications open — deadline July 24, 2026 at 6:00 PM</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-300">
             <Button asChild className="bg-[#0F0F0F] text-[#FFF6E0] hover:bg-[#2D2D2D] rounded-full px-8 py-6 text-base font-medium">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3UlgM7xfHFeeA05SoPdBK_-a3l3ZG-VTOztDCA9iaBEvQUw/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 Apply Now
               </a>
             </Button>
@@ -607,16 +552,16 @@ export default function ApplyPage() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
             <GoogleDots className="mb-4" />
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Executive Leadership</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Dev Team Roles</h2>
             <p className="text-lg text-[#444444] max-w-2xl">
-              Ten offices. Each with a clear mandate, a standing team, and constitutional accountability.
+              Eight roles. Each with a clear focus, real products to build, and a team to collaborate with.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-[1fr_1.5fr] gap-0 border border-[#E8DFC8] rounded-2xl overflow-hidden bg-white">
             {/* Role List */}
             <div className="border-r border-[#E8DFC8] max-h-[600px] overflow-y-auto">
-              {EXECUTIVE_ROLES.map((role, i) => (
+              {DEV_TEAM_ROLES.map((role, i) => (
                 <button
                   key={i}
                   id={`role-button-${i}`}
@@ -650,14 +595,14 @@ export default function ApplyPage() {
                   style={{ backgroundColor: GOOGLE_COLORS[activeRole % 4] }}
                 />
                 <span className="text-sm font-mono text-[#444444] tracking-wider uppercase">
-                  Office {String(activeRole + 1).padStart(2, "0")} of 10
+                  Role {String(activeRole + 1).padStart(2, "0")} of 08
                 </span>
               </div>
               <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-1">
-                {EXECUTIVE_ROLES[activeRole].title}
+                {DEV_TEAM_ROLES[activeRole].title}
               </h3>
               <p className="text-base text-[#444444] font-medium mb-5">
-                {EXECUTIVE_ROLES[activeRole].mandate}
+                {DEV_TEAM_ROLES[activeRole].mandate}
               </p>
 
               {/* Purpose */}
@@ -667,7 +612,7 @@ export default function ApplyPage() {
                   Purpose
                 </h4>
                 <p className="text-sm text-[#2D2D2D] leading-relaxed">
-                  {EXECUTIVE_ROLES[activeRole].purpose}
+                  {DEV_TEAM_ROLES[activeRole].purpose}
                 </p>
               </div>
 
@@ -678,7 +623,7 @@ export default function ApplyPage() {
                   Key Responsibilities
                 </h4>
                 <div className="space-y-2">
-                  {EXECUTIVE_ROLES[activeRole].responsibilities.map((item, i) => (
+                  {DEV_TEAM_ROLES[activeRole].responsibilities.map((item, i) => (
                     <div key={i} className="flex items-start gap-3 text-sm text-[#2D2D2D]">
                       <span className="flex items-center justify-center w-5 h-5 rounded-full border border-[#E8DFC8] text-[10px] font-mono text-[#6B6B6B] shrink-0 mt-0.5">
                         {String(i + 1).padStart(2, "0")}
@@ -696,7 +641,7 @@ export default function ApplyPage() {
                   Requirements
                 </h4>
                 <div className="space-y-2">
-                  {EXECUTIVE_ROLES[activeRole].requirements.map((item, i) => (
+                  {DEV_TEAM_ROLES[activeRole].requirements.map((item, i) => (
                     <div key={i} className="flex items-start gap-3 text-sm text-[#2D2D2D]">
                       <span className="w-4 h-4 rounded border border-[#D0C9B8] shrink-0 mt-0.5" />
                       <span className="leading-relaxed">{item}</span>
@@ -712,7 +657,7 @@ export default function ApplyPage() {
                   What the Panel Looks For
                 </h4>
                 <div className="space-y-1.5">
-                  {EXECUTIVE_ROLES[activeRole].panelLooksFor.map((item, i) => (
+                  {DEV_TEAM_ROLES[activeRole].panelLooksFor.map((item, i) => (
                     <div key={i} className="flex items-start gap-3 text-sm text-[#2D2D2D]">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#0F0F0F] shrink-0 mt-[7px]" />
                       <span className="leading-relaxed">{item}</span>
@@ -723,7 +668,7 @@ export default function ApplyPage() {
 
               <div className="mt-auto pt-4">
                 <Button asChild className="bg-[#0F0F0F] text-[#FFF6E0] hover:bg-[#2D2D2D] rounded-full px-6 text-sm">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3UlgM7xfHFeeA05SoPdBK_-a3l3ZG-VTOztDCA9iaBEvQUw/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+                  <a href="#" target="_blank" rel="noopener noreferrer">
                     Apply for this role →
                   </a>
                 </Button>
@@ -794,18 +739,18 @@ export default function ApplyPage() {
             <GoogleDots className="mb-4" />
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">What We Look For</h2>
             <p className="text-lg text-[#444444] max-w-2xl">
-              You don&apos;t need to be a Computer Science student. You need to care.
+              You don&apos;t need a stacked portfolio. You need curiosity and the willingness to build.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: "Competence", detail: "Demonstrated ability in the domain of the office you seek. Show us what you've done." },
-              { title: "Reliability", detail: "Consistency, follow-through, and the ability to deliver when it matters. Not just promises." },
-              { title: "Institutional Understanding", detail: "Knowledge of our structure, mission, products, and how they connect across offices." },
-              { title: "Continuity Mindset", detail: "Build things that survive your departure. The institution outlasts every tenure." },
-              { title: "Commitment", detail: "Executive members may not hold concurrent principal leadership in other student organizations." },
-              { title: "Initiative", detail: "The capacity to see what needs doing and do it before being asked. Leaders act." },
+              { title: "Willingness to Learn", detail: "You don't need to know everything. We value curiosity and the drive to figure things out over what you already know." },
+              { title: "Curiosity", detail: "You tinker, explore new tools, ask why things work the way they do, and push beyond tutorials." },
+              { title: "Collaboration", detail: "You share what you learn, review PRs constructively, and lift others up instead of working in isolation." },
+              { title: "Product Thinking", detail: "You care about why we build something and who it serves — not just the tech behind it." },
+              { title: "Reliability", detail: "You show up, communicate early when you're stuck, and follow through on what you commit to." },
+              { title: "Community Spirit", detail: "You help others grow, contribute to open source, share knowledge freely, and make the team better." },
             ].map((item, i) => (
               <div key={i} className="group">
                 <div className="flex items-start gap-4">
@@ -832,7 +777,7 @@ export default function ApplyPage() {
             <GoogleDots className="mb-4" />
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">How It Works</h2>
             <p className="text-lg text-[#444444] max-w-2xl">
-              We don&apos;t do elections. We do structured selection — applications, interviews, and deliberation by the Leadership Selection Panel.
+              We don&apos;t do elections. We do structured selection — applications, portfolio review, and a short technical chat with the dev leads.
             </p>
           </div>
 
@@ -869,8 +814,8 @@ export default function ApplyPage() {
           </h2>
           <p className="text-lg text-[#FFF6E0]/60 mb-12 max-w-xl mx-auto">
             {isExpired
-              ? "Thank you to everyone who applied. The Leadership Selection Panel is now reviewing applications."
-              : "Office is for responsibility, not prestige. If you understand that, we want to hear from you."}
+              ? "Thank you to everyone who applied. The dev leads are now reviewing submissions."
+              : "We care about willingness to build and curiosity — not grades or a stacked portfolio."}
           </p>
 
           {/* Countdown */}
@@ -884,13 +829,13 @@ export default function ApplyPage() {
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-[#FFF6E0]/40 font-mono mb-12">Applications close May 15, 2026 at 11:59 PM</p>
+              <p className="text-sm text-[#FFF6E0]/40 font-mono mb-12">Applications close July 24, 2026 at 6:00 PM</p>
             </>
           )}
 
           {!isExpired && (
             <Button asChild className="bg-[#FFF6E0] text-[#0F0F0F] hover:bg-white rounded-full px-10 py-6 text-base font-bold">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3UlgM7xfHFeeA05SoPdBK_-a3l3ZG-VTOztDCA9iaBEvQUw/viewform?usp=header" target="_blank" rel="noopener noreferrer">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 Submit Your Application
               </a>
             </Button>

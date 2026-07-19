@@ -44,13 +44,22 @@ const HERO_MESSAGES = [
 
 const TYPEWRITER_COLOR = "#6B6B6B"
 
-function RotatingTypewriter() {
+function RotatingTypewriter({ messages }: { messages: string[] }) {
   const [messageIndex, setMessageIndex] = useState(0)
   const [displayText, setDisplayText] = useState("")
   const [isDeleting, setIsDeleting] = useState(false)
   const [cursorVisible, setCursorVisible] = useState(true)
+  const [msgIdx, setMsgIdx] = useState(0)
 
-  const fullText = HERO_MESSAGES[messageIndex]
+  // Reset when messages array changes (tab switch)
+  useEffect(() => {
+    setMessageIndex(0)
+    setDisplayText("")
+    setIsDeleting(false)
+    setMsgIdx(0)
+  }, [messages])
+
+  const fullText = messages[messageIndex]
 
   // Cursor blink
   useEffect(() => {
@@ -78,11 +87,11 @@ function RotatingTypewriter() {
       }, 25)
     } else if (isDeleting && displayText.length === 0) {
       setIsDeleting(false)
-      setMessageIndex((prev) => (prev + 1) % HERO_MESSAGES.length)
+      setMessageIndex((prev) => (prev + 1) % messages.length)
     }
 
     return () => clearTimeout(timeout)
-  }, [displayText, isDeleting, fullText])
+  }, [displayText, isDeleting, fullText, messages])
 
   return (
     <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight mb-8 animate-fade-in-up animation-delay-100 min-h-[1.9em] md:min-h-[2.85em]">
@@ -101,7 +110,7 @@ function RotatingTypewriter() {
 
 const DEV_TEAM_ROLES = [
   {
-    title: "Frontend Developer",
+    title: "Frontend Specialist",
     mandate: "Build Interfaces",
     purpose:
       "Build and maintain the user-facing side of GDG Babcock's products. Translate designs into responsive, accessible, and performant interfaces that serve the entire campus community.",
@@ -109,7 +118,7 @@ const DEV_TEAM_ROLES = [
       "Build and maintain UI for community products (GDG Site, BabcockVotes, RADAR, Babcock 100, Apply Portal)",
       "Translate Figma designs into pixel-perfect, responsive components using React and Next.js",
       "Ensure cross-browser compatibility, accessibility, and performance across all products",
-      "Collaborate with UI/UX Designers to refine user flows and interaction patterns",
+      "Collaborate with UI/UX Specialists to refine user flows and interaction patterns",
       "Write reusable component libraries and maintain frontend documentation",
       "Review frontend PRs and mentor junior contributors on best practices",
     ],
@@ -128,7 +137,7 @@ const DEV_TEAM_ROLES = [
     ],
   },
   {
-    title: "Backend Developer",
+    title: "Backend Specialist",
     mandate: "Power the Platform",
     purpose:
       "Design, build, and maintain the server-side logic, APIs, and databases that power GDG Babcock's applications. Ensure data integrity, security, and reliable performance at scale.",
@@ -138,7 +147,7 @@ const DEV_TEAM_ROLES = [
       "Implement authentication, authorization, and data validation logic",
       "Write integration and unit tests; maintain API documentation",
       "Monitor server performance, debug production issues, and optimize bottlenecks",
-      "Collaborate with Frontend and DevOps engineers on end-to-end feature delivery",
+      "Collaborate with Frontend and DevOps specialists on end-to-end feature delivery",
     ],
     requirements: [
       "Experience with Node.js, Python, or similar backend languages",
@@ -155,7 +164,7 @@ const DEV_TEAM_ROLES = [
     ],
   },
   {
-    title: "AI/ML Engineer",
+    title: "AI/ML Specialist",
     mandate: "Ship Intelligence",
     purpose:
       "Integrate AI-powered features into GDG Babcock products. Work with LLMs, embeddings, RAG pipelines, and agent frameworks to build tools that solve real problems for the campus community.",
@@ -182,7 +191,7 @@ const DEV_TEAM_ROLES = [
     ],
   },
   {
-    title: "DevOps/Cloud Engineer",
+    title: "DevOps/Cloud Specialist",
     mandate: "Keep It Running",
     purpose:
       "Own deployment pipelines, cloud infrastructure, and observability for all GDG Babcock products. Ensure fast, reliable, and secure delivery of every service the community depends on.",
@@ -209,7 +218,7 @@ const DEV_TEAM_ROLES = [
     ],
   },
   {
-    title: "UI/UX Designer",
+    title: "UI/UX Specialist",
     mandate: "Design the Experience",
     purpose:
       "Own the visual and interaction design of GDG Babcock's products. Conduct user research, create design systems, and ensure every product is intuitive, accessible, and beautiful.",
@@ -217,7 +226,7 @@ const DEV_TEAM_ROLES = [
       "Design user flows, wireframes, and high-fidelity mockups in Figma",
       "Build and maintain a shared design system used across all community products",
       "Conduct user research, usability testing, and iterate based on feedback",
-      "Collaborate with Frontend Developers to ensure design fidelity in implementation",
+      "Collaborate with Frontend Specialists to ensure design fidelity in implementation",
       "Design for accessibility — color contrast, keyboard navigation, screen readers",
       "Lead design critiques and contribute to the visual identity of the GDG Babcock brand",
     ],
@@ -233,6 +242,127 @@ const DEV_TEAM_ROLES = [
       "Ability to give and receive constructive design feedback",
       "Systems thinking — reusable components over one-off designs",
       "Curiosity about the intersection of design and code",
+    ],
+  },
+]
+
+const HERO_MESSAGES_TRACKS = [
+  "Teach the next generation of builders.",
+  "Design learning paths that actually work.",
+  "Lead workshops. Mentor minds. Set the standard.",
+  "Shape what the community learns next.",
+]
+
+const DEV_TEAM_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdHAHvOfQJ7BSfGyes-RT8rJEKh-ugXHj1otWpf6hd-uyKiGg/viewform?usp=dialog"
+const TRACK_LEAD_FORM_URL = "#form-not-ready"
+
+const TRACK_LEAD_ROLES = [
+  {
+    title: "Software Development & Engineering Lead",
+    mandate: "Teach the Stack",
+    purpose:
+      "Lead the Software Development & Engineering track. Design curriculum, run workshops, and mentor members across frontend, backend, full-stack, mobile, game development, APIs, databases, Git, and system design.",
+    responsibilities: [
+      "Design and deliver structured learning sessions for the Software Development track",
+      "Mentor track members through projects, code reviews, and one-on-one guidance",
+      "Stay current with industry trends and incorporate them into the curriculum",
+      "Coordinate with other Track Leads on cross-track workshops and initiatives",
+      "Assess member progress and adapt teaching approaches to different skill levels",
+      "Collaborate with the dev team to align track content with real product needs",
+    ],
+    requirements: [
+      "Strong proficiency across the software development stack — frontend, backend, or full-stack",
+      "Experience teaching, mentoring, or tutoring in a technical capacity",
+      "Ability to break down complex engineering concepts for learners at different levels",
+      "Active GitHub profile or portfolio demonstrating hands-on work",
+    ],
+    panelLooksFor: [
+      "Depth of technical knowledge and ability to teach it clearly",
+      "Curriculum design thinking — structured, progressive, goal-oriented",
+      "Patience and empathy for learners at different stages",
+      "Track record of mentoring or community contributions",
+      "Passion for growing the next generation of developers",
+    ],
+  },
+  {
+    title: "Data & AI Lead",
+    mandate: "Teach Intelligence",
+    purpose:
+      "Lead the Data & AI track. Design curriculum, run workshops, and mentor members across data analytics, data science, machine learning, deep learning, generative AI, AI application development, and data visualization.",
+    responsibilities: [
+      "Design and deliver structured learning sessions for the Data & AI track",
+      "Guide members through hands-on ML projects, Kaggle competitions, and AI experiments",
+      "Keep the curriculum current with the fast-moving AI landscape",
+      "Organize AI-focused events — hackathons, study groups, and Build with AI sessions",
+      "Mentor members on building and deploying real AI applications",
+      "Collaborate with the dev team on AI-powered features for community products",
+    ],
+    requirements: [
+      "Strong understanding of data science and machine learning fundamentals",
+      "Experience with Python and common data/ML libraries (pandas, scikit-learn, TensorFlow/PyTorch)",
+      "Familiarity with LLMs, prompt engineering, and generative AI tools",
+      "Experience teaching or mentoring in a technical capacity",
+    ],
+    panelLooksFor: [
+      "Ability to make AI accessible — you demystify, not intimidate",
+      "Hands-on experience with real datasets and shipped ML/AI projects",
+      "Structured approach to teaching complex, fast-evolving topics",
+      "Ethical awareness — bias, safety, and responsible AI use",
+      "Energy for building a data-driven culture in the community",
+    ],
+  },
+  {
+    title: "Infrastructure & Security Lead",
+    mandate: "Teach the Backbone",
+    purpose:
+      "Lead the Infrastructure & Security track. Design curriculum, run workshops, and mentor members across cloud computing, DevOps, cybersecurity, networking, system administration, database administration, and blockchain/Web3.",
+    responsibilities: [
+      "Design and deliver structured learning sessions for the Infrastructure & Security track",
+      "Set up and maintain lab environments for hands-on cloud, DevOps, and security exercises",
+      "Organize CTF competitions, security workshops, and cloud certification study groups",
+      "Mentor members on industry tools — Docker, Kubernetes, CI/CD, and cloud platforms",
+      "Keep the curriculum aligned with industry certifications and best practices",
+      "Collaborate with the dev team on deployment and infrastructure for community products",
+    ],
+    requirements: [
+      "Strong understanding of cloud platforms (GCP, AWS, or Azure) and Linux fundamentals",
+      "Experience with DevOps practices — CI/CD, containerization, infrastructure as code",
+      "Knowledge of cybersecurity fundamentals and common attack/defense patterns",
+      "Experience teaching or mentoring in a technical capacity",
+    ],
+    panelLooksFor: [
+      "Systems-level thinking — you understand how the pieces connect",
+      "Security-first mindset — you bake safe defaults into everything you teach",
+      "Practical, hands-on approach to learning — labs over lectures",
+      "Ability to prepare members for real industry roles and certifications",
+      "Calm and methodical — infrastructure and security demand precision",
+    ],
+  },
+  {
+    title: "Design & Management Lead",
+    mandate: "Teach the Craft",
+    purpose:
+      "Lead the Design & Management track. Design curriculum, run workshops, and mentor members across UI/UX design, product design, UX research, design systems, product management, project management, agile methodologies, and technical writing.",
+    responsibilities: [
+      "Design and deliver structured learning sessions for the Design & Management track",
+      "Run design critiques, portfolio reviews, and hands-on Figma workshops",
+      "Teach product management and agile methodologies through real community projects",
+      "Guide members through UX research, usability testing, and design system creation",
+      "Mentor members on technical writing — documentation, tutorials, and case studies",
+      "Collaborate with dev team and other tracks to embed design thinking into products",
+    ],
+    requirements: [
+      "Strong proficiency in UI/UX design (Figma, design systems, prototyping)",
+      "Understanding of product management and agile development methodologies",
+      "Portfolio demonstrating design and/or product management work",
+      "Experience teaching, mentoring, or facilitating workshops",
+    ],
+    panelLooksFor: [
+      "Design thinking and user-centered problem-solving approach",
+      "Ability to bridge design, business, and engineering perspectives",
+      "Structured, repeatable approach to teaching creative processes",
+      "Quality of design or product portfolio — shipped work over speculation",
+      "Passion for cultivating well-rounded builders — not just designers, not just managers",
     ],
   },
 ]
@@ -326,9 +456,19 @@ function AnimatedCounter({ target }: { target: string }) {
 }
 
 export default function ApplyPage() {
+  const [activeTab, setActiveTab] = useState<"dev" | "tracks">("dev")
   const [activeRole, setActiveRole] = useState(0)
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
   const [isExpired, setIsExpired] = useState(false)
+
+  const activeMessages = activeTab === "dev" ? HERO_MESSAGES : HERO_MESSAGES_TRACKS
+  const activeRoles = activeTab === "dev" ? DEV_TEAM_ROLES : TRACK_LEAD_ROLES
+  const activeFormUrl = activeTab === "dev" ? DEV_TEAM_FORM_URL : TRACK_LEAD_FORM_URL
+
+  const handleTabChange = (tab: "dev" | "tracks") => {
+    setActiveTab(tab)
+    setActiveRole(0)
+  }
 
   useEffect(() => {
     const targetDate = new Date(2026, 6, 24, 18, 0, 0) // July 24, 2026 6:00 PM local time
@@ -363,13 +503,13 @@ export default function ApplyPage() {
             <a href="#products" className="hover:opacity-60 transition-opacity">Products</a>
             <a href="#process" className="hover:opacity-60 transition-opacity">Process</a>
             <Button asChild className="bg-[#0F0F0F] text-[#FFF6E0] hover:bg-[#2D2D2D] rounded-full px-6 text-sm">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHAHvOfQJ7BSfGyes-RT8rJEKh-ugXHj1otWpf6hd-uyKiGg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+              <a href={DEV_TEAM_FORM_URL} target="_blank" rel="noopener noreferrer">
                 Apply Now
               </a>
             </Button>
           </div>
           <Button asChild className="md:hidden bg-[#0F0F0F] text-[#FFF6E0] hover:bg-[#2D2D2D] rounded-full px-5 text-sm">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHAHvOfQJ7BSfGyes-RT8rJEKh-ugXHj1otWpf6hd-uyKiGg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+            <a href={DEV_TEAM_FORM_URL} target="_blank" rel="noopener noreferrer">
               Apply
             </a>
           </Button>
@@ -379,22 +519,56 @@ export default function ApplyPage() {
       {/* Hero */}
       <section className="pt-32 pb-16 md:pt-44 md:pb-24 px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="animate-fade-in-up">
-            <div className="flex items-center gap-3 mb-8">
-              <GoogleDots />
-              <span className="text-sm font-mono text-[#444444] tracking-wider uppercase">2026 Dev Team Recruitment</span>
+          {/* Top Tab Toggle */}
+          <div className="animate-fade-in-up mb-8">
+            <div className="inline-flex bg-white border border-[#E8DFC8] rounded-full p-1">
+              <button
+                onClick={() => handleTabChange("dev")}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  activeTab === "dev"
+                    ? "bg-[#0F0F0F] text-[#FFF6E0]"
+                    : "text-[#444444] hover:text-[#0F0F0F]"
+                }`}
+              >
+                Dev Team
+              </button>
+              <button
+                onClick={() => handleTabChange("tracks")}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  activeTab === "tracks"
+                    ? "bg-[#0F0F0F] text-[#FFF6E0]"
+                    : "text-[#444444] hover:text-[#0F0F0F]"
+                }`}
+              >
+                Track Leads
+              </button>
             </div>
           </div>
-          <RotatingTypewriter />
-          <p className="text-lg md:text-xl text-[#444444] max-w-2xl mb-12 leading-relaxed animate-fade-in-up animation-delay-200">
-            GDG on Campus Babcock is recruiting its next Dev Team.
-            We are looking for people who want to build, learn, and contribute
-            to products the whole campus relies on.
-            <span className="block mt-3 text-base font-mono text-[#6B6B6B]">Applications open — deadline July 24, 2026 at 6:00 PM</span>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-300">
+
+          {/* Hero content — fades in on tab change */}
+          <div key={activeTab} className="animate-fade-in-up">
+            <div className="flex items-center gap-3 mb-8">
+              <GoogleDots />
+              <span className="text-sm font-mono text-[#444444] tracking-wider uppercase">
+                {activeTab === "dev" ? "2026 Dev Team Recruitment" : "2026 Track Lead Recruitment"}
+              </span>
+            </div>
+          </div>
+          <RotatingTypewriter messages={activeMessages} />
+          <div key={`sub-${activeTab}`} className="animate-fade-in-up animation-delay-100">
+            <p className="text-lg md:text-xl text-[#444444] max-w-2xl mb-12 leading-relaxed">
+              {activeTab === "dev"
+                ? "GDG on Campus Babcock is recruiting its next Dev Team. We are looking for people who want to build, learn, and contribute to products the whole campus relies on."
+                : "GDG on Campus Babcock is selecting its next Track Leads. We are looking for people who want to teach, mentor, and shape the learning experience of the community."}
+              <span className="block mt-3 text-base font-mono text-[#6B6B6B]">Applications open — deadline July 24, 2026 at 6:00 PM</span>
+              {activeTab === "tracks" && (
+                <span className="block mt-2 text-sm font-mono text-[#EA4335]">Track Lead application form is being built — coming soon</span>
+              )}
+            </p>
+          </div>
+          <div key={`btns-${activeTab}`} className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-200">
             <Button asChild className="bg-[#0F0F0F] text-[#FFF6E0] hover:bg-[#2D2D2D] rounded-full px-8 py-6 text-base font-medium">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHAHvOfQJ7BSfGyes-RT8rJEKh-ugXHj1otWpf6hd-uyKiGg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+              <a href={activeFormUrl} target="_blank" rel="noopener noreferrer">
                 Apply Now
               </a>
             </Button>
@@ -448,7 +622,7 @@ export default function ApplyPage() {
             <div className="grid grid-cols-2 gap-6">
               {[
                 { value: "1,500+", label: "Community Members" },
-                { value: "10", label: "Executive Offices" },
+                { value: "10+", label: "Roles" },
                 { value: "6", label: "Institutional Products" },
                 { value: "All", label: "Departments Welcome" },
               ].map((stat, i) => (
@@ -469,18 +643,23 @@ export default function ApplyPage() {
       <SectionReveal>
       <section id="roles" className="py-24 md:py-32 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16">
+          <div className="mb-12">
             <GoogleDots className="mb-4" />
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Dev Team Roles</h2>
+
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+              {activeTab === "dev" ? "Dev Team Roles" : "Track Lead Roles"}
+            </h2>
             <p className="text-lg text-[#444444] max-w-2xl">
-              Each role has a clear focus, real products to build, and a team to collaborate with.
+              {activeTab === "dev"
+                ? "Each role has a clear focus, real products to build, and a team to collaborate with."
+                : "Lead a learning track. Design curriculum, run workshops, and mentor the next generation of builders."}
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-[1fr_1.5fr] gap-0 border border-[#E8DFC8] rounded-2xl overflow-hidden bg-white">
+          <div key={activeTab} className="grid lg:grid-cols-[1fr_1.5fr] gap-0 border border-[#E8DFC8] rounded-2xl overflow-hidden bg-white animate-fade-in-up">
             {/* Role List */}
             <div className="border-r border-[#E8DFC8] max-h-[600px] overflow-y-auto">
-              {DEV_TEAM_ROLES.map((role, i) => (
+              {activeRoles.map((role, i) => (
                 <button
                   key={i}
                   id={`role-button-${i}`}
@@ -514,14 +693,14 @@ export default function ApplyPage() {
                   style={{ backgroundColor: GOOGLE_COLORS[activeRole % 4] }}
                 />
                 <span className="text-sm font-mono text-[#444444] tracking-wider uppercase">
-                  Role {String(activeRole + 1).padStart(2, "0")} of 05
+                  Role {String(activeRole + 1).padStart(2, "0")} of {String(activeRoles.length).padStart(2, "0")}
                 </span>
               </div>
               <h3 className="text-2xl md:text-3xl font-bold tracking-tight mb-1">
-                {DEV_TEAM_ROLES[activeRole].title}
+                {activeRoles[activeRole].title}
               </h3>
               <p className="text-base text-[#444444] font-medium mb-5">
-                {DEV_TEAM_ROLES[activeRole].mandate}
+                {activeRoles[activeRole].mandate}
               </p>
 
               {/* Purpose */}
@@ -531,7 +710,7 @@ export default function ApplyPage() {
                   Purpose
                 </h4>
                 <p className="text-sm text-[#2D2D2D] leading-relaxed">
-                  {DEV_TEAM_ROLES[activeRole].purpose}
+                  {activeRoles[activeRole].purpose}
                 </p>
               </div>
 
@@ -542,7 +721,7 @@ export default function ApplyPage() {
                   Key Responsibilities
                 </h4>
                 <div className="space-y-2">
-                  {DEV_TEAM_ROLES[activeRole].responsibilities.map((item, i) => (
+                  {activeRoles[activeRole].responsibilities.map((item, i) => (
                     <div key={i} className="flex items-start gap-3 text-sm text-[#2D2D2D]">
                       <span className="flex items-center justify-center w-5 h-5 rounded-full border border-[#E8DFC8] text-[10px] font-mono text-[#6B6B6B] shrink-0 mt-0.5">
                         {String(i + 1).padStart(2, "0")}
@@ -560,7 +739,7 @@ export default function ApplyPage() {
                   Requirements
                 </h4>
                 <div className="space-y-2">
-                  {DEV_TEAM_ROLES[activeRole].requirements.map((item, i) => (
+                  {activeRoles[activeRole].requirements.map((item, i) => (
                     <div key={i} className="flex items-start gap-3 text-sm text-[#2D2D2D]">
                       <span className="w-4 h-4 rounded border border-[#D0C9B8] shrink-0 mt-0.5" />
                       <span className="leading-relaxed">{item}</span>
@@ -576,7 +755,7 @@ export default function ApplyPage() {
                   What the Panel Looks For
                 </h4>
                 <div className="space-y-1.5">
-                  {DEV_TEAM_ROLES[activeRole].panelLooksFor.map((item, i) => (
+                  {activeRoles[activeRole].panelLooksFor.map((item, i) => (
                     <div key={i} className="flex items-start gap-3 text-sm text-[#2D2D2D]">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#0F0F0F] shrink-0 mt-[7px]" />
                       <span className="leading-relaxed">{item}</span>
@@ -587,7 +766,7 @@ export default function ApplyPage() {
 
               <div className="mt-auto pt-4">
                 <Button asChild className="bg-[#0F0F0F] text-[#FFF6E0] hover:bg-[#2D2D2D] rounded-full px-6 text-sm">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHAHvOfQJ7BSfGyes-RT8rJEKh-ugXHj1otWpf6hd-uyKiGg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+                  <a href={activeFormUrl} target="_blank" rel="noopener noreferrer">
                     Apply for this role →
                   </a>
                 </Button>
@@ -754,7 +933,7 @@ export default function ApplyPage() {
 
           {!isExpired && (
             <Button asChild className="bg-[#FFF6E0] text-[#0F0F0F] hover:bg-white rounded-full px-10 py-6 text-base font-bold">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdHAHvOfQJ7BSfGyes-RT8rJEKh-ugXHj1otWpf6hd-uyKiGg/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+              <a href={DEV_TEAM_FORM_URL} target="_blank" rel="noopener noreferrer">
                 Submit Your Application
               </a>
             </Button>

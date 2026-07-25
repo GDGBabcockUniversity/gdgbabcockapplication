@@ -386,6 +386,32 @@ const DEV_TEAM_ROLES = [
     ],
     color: "#34A853",
   },
+  {
+    title: "Dev Team Member",
+    mandate: "Learn by Shipping",
+    purpose: "Join the dev team as a general contributor. Pair with specialists, pick up scoped tasks across the stack, and grow into a specialty by shipping real work on GDG Babcock products.",
+    responsibilities: [
+      "Take on scoped issues across frontend, backend, design, or ops as capacity allows",
+      "Pair with specialists on features, bug fixes, and reviews to build hands-on experience",
+      "Contribute to community products (GDG Site, BabcockVotes, RADAR, Babcock 100, Apply Portal)",
+      "Write clear PRs, respond to review feedback, and keep commitments visible to the team",
+      "Attend team standups, planning, and retros; help document what you learn along the way",
+      "Explore a specialization over time and grow into a specialist role",
+    ],
+    requirements: [
+      "Basic programming ability in any language and comfort with Git and GitHub",
+      "Willingness to learn the team's stack (React, Next.js, TypeScript, Node, or similar)",
+      "Consistent availability for meetings, reviews, and shipping small pieces of work",
+      "Openness to feedback and eagerness to pair with more experienced teammates",
+    ],
+    panelLooksFor: [
+      "Curiosity and initiative — you try things before asking to be told what to do",
+      "Follow-through on small commitments, not just enthusiasm for big ones",
+      "A collaborative attitude and willingness to ask for help early",
+      "Signs of a direction you want to grow into, even if not fully decided",
+    ],
+    color: "#F9AB00",
+  },
 ]
 
 const TRACK_LEAD_ROLES = [
@@ -557,7 +583,7 @@ const TIMELINE = [
   { step: "04", label: "Onboarding & Integration", detail: "Join the team, get repo access, meet your squad, and pick your first issue", color: "#34A853" },
 ]
 
-const DEV_TEAM_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdHAHvOfQJ7BSfGyes-RT8rJEKh-ugXHj1otWpf6hd-uyKiGg/viewform?usp=dialog"
+const DEV_TEAM_FORM_URL = "https://forms.gle/xPrMUXsoJyXJ67QD7"
 const TRACK_LEAD_FORM_URL = "#form-not-ready"
 
 const VALUES = [

@@ -387,7 +387,7 @@ const DEV_TEAM_ROLES = [
     color: "#34A853",
   },
   {
-    title: "Dev Team Member",
+    title: "Development Team Member",
     mandate: "Learn by Shipping",
     purpose: "Join the dev team as a general contributor. Pair with specialists, pick up scoped tasks across the stack, and grow into a specialty by shipping real work on GDG Babcock products.",
     responsibilities: [
@@ -603,15 +603,22 @@ const PRODUCTS = [
   },
 ]
 
-const TIMELINE = [
+const TIMELINE_DEV = [
   { step: "01", label: "Applications Open", detail: "Submit your application through the form below", color: "#4285F4" },
-  { step: "02", label: "Review & Portfolio Check", detail: "Dev leads review applications, portfolios, and GitHub profiles", color: "#EA4335" },
+  { step: "02", label: "Review & Portfolio Check", detail: "Technical leads review applications, portfolios, and GitHub profiles", color: "#EA4335" },
   { step: "03", label: "Technical Interview", detail: "Short chat — walk us through your projects, interests, and what you want to learn", color: "#F9AB00" },
   { step: "04", label: "Onboarding & Integration", detail: "Join the team, get repo access, meet your squad, and pick your first issue", color: "#34A853" },
 ]
 
+const TIMELINE_TRACKS = [
+  { step: "01", label: "Applications Open", detail: "Submit your application through the form below", color: "#4285F4" },
+  { step: "02", label: "Track Fit & Curriculum Review", detail: "Technical leads review your track pitch, teaching background, and curriculum ideas", color: "#EA4335" },
+  { step: "03", label: "Lead Interview", detail: "Short chat — walk us through your background, teaching style, and how you'd run the track", color: "#F9AB00" },
+  { step: "04", label: "Onboarding & Track Kickoff", detail: "Join the leads circle, get planning access, meet your students, and shape your track's first session", color: "#34A853" },
+]
+
 const DEV_TEAM_FORM_URL = "https://forms.gle/xPrMUXsoJyXJ67QD7"
-const TRACK_LEAD_FORM_URL = "#form-not-ready"
+const TRACK_LEAD_FORM_URL = "https://forms.gle/vqUFRmeaCoy6uvQy7"
 
 const VALUES = [
   { title: "Willingness to Learn", detail: "You don't need to know everything. We value curiosity and the drive to figure things out over what you already know.", icon: "📚" },
@@ -633,6 +640,7 @@ export default function ApplyPage() {
   const activeMessages = activeTab === "dev" ? HERO_MESSAGES : HERO_MESSAGES_TRACKS
   const activeRoles = activeTab === "dev" ? DEV_TEAM_ROLES : TRACK_LEAD_ROLES
   const activeFormUrl = activeTab === "dev" ? DEV_TEAM_FORM_URL : TRACK_LEAD_FORM_URL
+  const activeTimeline = activeTab === "dev" ? TIMELINE_DEV : TIMELINE_TRACKS
 
   const handleTabChange = (tab: "dev" | "tracks") => {
     setActiveTab(tab)
@@ -678,8 +686,8 @@ export default function ApplyPage() {
             <a href="#roles" className="text-white/60 hover:text-white transition-colors duration-200">Roles</a>
             <a href="#products" className="text-white/60 hover:text-white transition-colors duration-200">Products</a>
             <a href="#process" className="text-white/60 hover:text-white transition-colors duration-200">Process</a>
-            <Button asChild className="bg-white text-[#0a0a0a] hover:bg-[#FFF6E0] rounded-full px-6 text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-white/10">
-              <a href={DEV_TEAM_FORM_URL} target="_blank" rel="noopener noreferrer">
+            <Button asChild className="bg-white text-[#0a0a0a] rounded-full px-6 text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-white/10">
+              <a href={activeFormUrl} target="_blank" rel="noopener noreferrer">
                 Apply Now
               </a>
             </Button>
@@ -707,7 +715,7 @@ export default function ApplyPage() {
             <a href="#products" onClick={() => setMobileMenuOpen(false)} className="block text-white/60 hover:text-white transition-colors py-2">Products</a>
             <a href="#process" onClick={() => setMobileMenuOpen(false)} className="block text-white/60 hover:text-white transition-colors py-2">Process</a>
             <Button asChild className="w-full bg-white text-[#0a0a0a] hover:bg-[#FFF6E0] rounded-full px-6 text-sm font-semibold">
-              <a href={DEV_TEAM_FORM_URL} target="_blank" rel="noopener noreferrer">
+              <a href={activeFormUrl} target="_blank" rel="noopener noreferrer">
                 Apply Now
               </a>
             </Button>
@@ -764,14 +772,11 @@ export default function ApplyPage() {
                     ? "GDG on Campus Babcock is recruiting its next Dev Team. We are looking for people who want to build, learn, and contribute to products the whole campus relies on."
                     : "GDG on Campus Babcock is selecting its next Track Leads. We are looking for people who want to teach, mentor, and shape the learning experience of the community."}
                   <span className="block mt-3 text-sm font-mono text-white/30">Applications open — deadline August 2, 2026 at 11:59 PM</span>
-                  {activeTab === "tracks" && (
-                    <span className="block mt-2 text-sm font-mono text-[#EA4335]/80">Track Lead application form is being built — coming soon</span>
-                  )}
                 </p>
               </div>
 
               <div key={`btns-${activeTab}`} className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-200">
-                <Button asChild className="bg-white text-[#0a0a0a] hover:bg-[#FFF6E0] rounded-full px-8 py-6 text-base font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-white/10 hover:scale-[1.02]">
+                <Button asChild className="bg-white text-[#0a0a0a] rounded-full px-8 py-6 text-base font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-white/10 hover:scale-[1.02]">
                   <a href={activeFormUrl} target="_blank" rel="noopener noreferrer">
                     Apply Now
                   </a>
@@ -1143,7 +1148,7 @@ export default function ApplyPage() {
             </div>
 
             <div className="space-y-0">
-              {TIMELINE.map((item, i) => (
+              {activeTimeline.map((item, i) => (
                 <div key={i} className="flex gap-6 md:gap-10 group">
                   <div className="flex flex-col items-center">
                     <div
@@ -1152,7 +1157,7 @@ export default function ApplyPage() {
                     >
                       <span style={{ color: item.color }}>{item.step}</span>
                     </div>
-                    {i < TIMELINE.length - 1 && (
+                    {i < activeTimeline.length - 1 && (
                       <div className="w-px h-full bg-gradient-to-b from-white/10 to-transparent my-2" />
                     )}
                   </div>
@@ -1201,13 +1206,7 @@ export default function ApplyPage() {
             </>
           )}
 
-          {!isExpired && (
-            <Button asChild className="bg-white text-[#0a0a0a] hover:bg-[#FFF6E0] rounded-full px-10 py-6 text-base font-bold transition-all duration-300 hover:shadow-2xl hover:shadow-white/20 hover:scale-[1.03]">
-              <a href={DEV_TEAM_FORM_URL} target="_blank" rel="noopener noreferrer">
-                Submit Your Application
-              </a>
-            </Button>
-          )}
+       
         </div>
       </section>
 

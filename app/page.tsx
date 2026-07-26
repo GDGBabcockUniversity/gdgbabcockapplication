@@ -686,7 +686,7 @@ export default function ApplyPage() {
             <a href="#roles" className="text-white/60 hover:text-white transition-colors duration-200">Roles</a>
             <a href="#products" className="text-white/60 hover:text-white transition-colors duration-200">Products</a>
             <a href="#process" className="text-white/60 hover:text-white transition-colors duration-200">Process</a>
-            <Button asChild className="bg-white text-[#0a0a0a] rounded-full px-6 text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-white/10">
+            <Button asChild className="bg-white text-[#0a0a0a] hover:bg-[#E8E8E8] rounded-full px-6 text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-white/10">
               <a href={activeFormUrl} target="_blank" rel="noopener noreferrer">
                 Apply Now
               </a>
@@ -714,7 +714,7 @@ export default function ApplyPage() {
             <a href="#roles" onClick={() => setMobileMenuOpen(false)} className="block text-white/60 hover:text-white transition-colors py-2">Roles</a>
             <a href="#products" onClick={() => setMobileMenuOpen(false)} className="block text-white/60 hover:text-white transition-colors py-2">Products</a>
             <a href="#process" onClick={() => setMobileMenuOpen(false)} className="block text-white/60 hover:text-white transition-colors py-2">Process</a>
-            <Button asChild className="w-full bg-white text-[#0a0a0a] hover:bg-[#FFF6E0] rounded-full px-6 text-sm font-semibold">
+            <Button asChild className="w-full bg-white text-[#0a0a0a] hover:bg-[#E8E8E8] rounded-full px-6 text-sm font-semibold">
               <a href={activeFormUrl} target="_blank" rel="noopener noreferrer">
                 Apply Now
               </a>
@@ -771,12 +771,12 @@ export default function ApplyPage() {
                   {activeTab === "dev"
                     ? "GDG on Campus Babcock is recruiting its next Dev Team. We are looking for people who want to build, learn, and contribute to products the whole campus relies on."
                     : "GDG on Campus Babcock is selecting its next Track Leads. We are looking for people who want to teach, mentor, and shape the learning experience of the community."}
-                  <span className="block mt-3 text-sm font-mono text-white/30">Applications open — deadline August 2, 2026 at 11:59 PM</span>
+                  
                 </p>
               </div>
 
               <div key={`btns-${activeTab}`} className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-200">
-                <Button asChild className="bg-white text-[#0a0a0a] rounded-full px-8 py-6 text-base font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-white/10 hover:scale-[1.02]">
+                <Button asChild className="bg-white text-[#0a0a0a] hover:bg-[#E8E8E8] rounded-full px-8 py-6 text-base font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-white/10 hover:scale-[1.02]">
                   <a href={activeFormUrl} target="_blank" rel="noopener noreferrer">
                     Apply Now
                   </a>
@@ -1032,7 +1032,7 @@ export default function ApplyPage() {
                 </div>
 
                 <div className="mt-auto pt-4">
-                  <Button asChild className="bg-white text-[#0a0a0a] hover:bg-[#FFF6E0] rounded-full px-6 text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-white/10">
+                  <Button asChild className="bg-white text-[#0a0a0a] hover:bg-[#E8E8E8] rounded-full px-6 text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-white/10">
                     <a href={activeFormUrl} target="_blank" rel="noopener noreferrer">
                       Apply for this role →
                     </a>

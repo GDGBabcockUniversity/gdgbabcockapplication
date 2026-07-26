@@ -523,6 +523,33 @@ const TRACK_LEAD_ROLES = [
     ],
     color: "#34A853",
   },
+  {
+    title: "Marketing Lead",
+    mandate: "Teach the Story",
+    purpose: "Lead the Marketing track. Design curriculum, run workshops, and mentor members across brand strategy, content marketing, social media, copywriting, community growth, campaign analytics, and developer relations.",
+    responsibilities: [
+      "Design and deliver structured learning sessions for the Marketing track",
+      "Mentor members on writing sharp copy, running campaigns, and measuring what worked",
+      "Run workshops on social platforms, brand voice, positioning, and community growth",
+      "Coordinate with other Track Leads on cross-track launches, event marketing, and recruitment cycles",
+      "Guide members through real campaigns for GDG Babcock events and product launches",
+      "Collaborate with Design & Management on assets, and with the dev team on launch messaging",
+    ],
+    requirements: [
+      "Proven marketing experience — campaigns you've shipped, communities you've grown, or content you've published",
+      "Strong writing ability with a portfolio of threads, captions, newsletters, or campaign copy",
+      "Familiarity with social analytics, scheduling tools, and campaign planning",
+      "Experience teaching, mentoring, or facilitating workshops",
+    ],
+    panelLooksFor: [
+      "A portfolio of real marketing work — not just theory",
+      "Instinct for what an audience actually clicks, shares, or shows up for",
+      "Clarity and voice in writing — no generic corporate tone",
+      "Data awareness — you check what worked instead of guessing",
+      "Ability to teach marketing as a craft, not a vibe",
+    ],
+    color: "#4285F4",
+  },
 ]
 
 const PRODUCTS = [

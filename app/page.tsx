@@ -617,6 +617,8 @@ const TIMELINE_TRACKS = [
   { step: "04", label: "Onboarding & Track Kickoff", detail: "Join the leads circle, get planning access, meet your students, and shape your track's first session", color: "#34A853" },
 ]
 
+const APPLICATION_DEADLINE = new Date(2026, 7, 2, 23, 59, 0)
+
 const DEV_TEAM_FORM_URL = "https://forms.gle/xPrMUXsoJyXJ67QD7"
 const TRACK_LEAD_FORM_URL = "https://forms.gle/vqUFRmeaCoy6uvQy7"
 
@@ -634,7 +636,7 @@ export default function ApplyPage() {
   const [activeTab, setActiveTab] = useState<"dev" | "tracks">("dev")
   const [activeRole, setActiveRole] = useState(0)
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
-  const [isExpired, setIsExpired] = useState(false)
+  const [isExpired, setIsExpired] = useState(() => Date.now() >= APPLICATION_DEADLINE.getTime())
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const activeMessages = activeTab === "dev" ? HERO_MESSAGES : HERO_MESSAGES_TRACKS
@@ -647,11 +649,15 @@ export default function ApplyPage() {
     setActiveRole(0)
   }
 
+  const applyButtonProps = isExpired
+    ? { "aria-disabled": true, className: "pointer-events-none opacity-50" }
+    : { href: activeFormUrl, target: "_blank", rel: "noopener noreferrer" }
+  const applyButtonLabel = isExpired ? "Applications Closed" : "Apply Now"
+
   useEffect(() => {
-    const targetDate = new Date(2026, 7, 2, 23, 59, 0)
     const timer = setInterval(() => {
       const now = new Date().getTime()
-      const distance = targetDate.getTime() - now
+      const distance = APPLICATION_DEADLINE.getTime() - now
       if (distance > 0) {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
@@ -687,8 +693,8 @@ export default function ApplyPage() {
             <a href="#products" className="text-white/60 hover:text-white transition-colors duration-200">Products</a>
             <a href="#process" className="text-white/60 hover:text-white transition-colors duration-200">Process</a>
             <Button asChild className="bg-white text-[#0a0a0a] hover:bg-[#E8E8E8] rounded-full px-6 text-sm font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-white/10">
-              <a href={activeFormUrl} target="_blank" rel="noopener noreferrer">
-                Apply Now
+              <a {...applyButtonProps}>
+                {applyButtonLabel}
               </a>
             </Button>
           </div>
@@ -715,8 +721,8 @@ export default function ApplyPage() {
             <a href="#products" onClick={() => setMobileMenuOpen(false)} className="block text-white/60 hover:text-white transition-colors py-2">Products</a>
             <a href="#process" onClick={() => setMobileMenuOpen(false)} className="block text-white/60 hover:text-white transition-colors py-2">Process</a>
             <Button asChild className="w-full bg-white text-[#0a0a0a] hover:bg-[#E8E8E8] rounded-full px-6 text-sm font-semibold">
-              <a href={activeFormUrl} target="_blank" rel="noopener noreferrer">
-                Apply Now
+              <a {...applyButtonProps}>
+                {applyButtonLabel}
               </a>
             </Button>
           </div>
@@ -777,8 +783,8 @@ export default function ApplyPage() {
 
               <div key={`btns-${activeTab}`} className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-200">
                 <Button asChild className="bg-white text-[#0a0a0a] hover:bg-[#E8E8E8] rounded-full px-8 py-6 text-base font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-white/10 hover:scale-[1.02]">
-                  <a href={activeFormUrl} target="_blank" rel="noopener noreferrer">
-                    Apply Now
+                  <a {...applyButtonProps}>
+                    {applyButtonLabel}
                   </a>
                 </Button>
                 <Button asChild variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:border-white/30 rounded-full px-8 py-6 text-base font-medium transition-all duration-300">
@@ -793,10 +799,17 @@ export default function ApplyPage() {
             <aside className="application-dossier animate-slide-in-right animation-delay-300">
               <div className="flex items-center justify-between border-b border-white/10 pb-5">
                 <span className="text-[11px] font-mono tracking-[0.18em] text-white/45 uppercase">Recruitment brief</span>
-                <span className="status-pill"><span className="status-dot" />Open now</span>
+                {isExpired ? (
+                  <span className="status-pill" style={{ color: "#f8c9c2", background: "rgba(234, 67, 53, 0.13)" }}>
+                    <span className="status-dot dot-red" style={{ boxShadow: "0 0 0 4px rgba(234, 67, 53, 0.12)" }} />
+                    Closed
+                  </span>
+                ) : (
+                  <span className="status-pill"><span className="status-dot" />Open now</span>
+                )}
               </div>
               <div className="py-8">
-                <p className="text-white/45 text-sm mb-3">Applications close</p>
+                <p className="text-white/45 text-sm mb-3">{isExpired ? "Applications closed" : "Applications close"}</p>
                 <p className="text-3xl font-bold tracking-tight leading-none">2ND AUGUST</p>
                 <p className="text-sm text-white/45 mt-2">11:59 PM · WAT</p>
               </div>

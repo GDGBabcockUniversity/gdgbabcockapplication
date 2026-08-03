@@ -617,7 +617,7 @@ const TIMELINE_TRACKS = [
   { step: "04", label: "Onboarding & Track Kickoff", detail: "Join the leads circle, get planning access, meet your students, and shape your track's first session", color: "#34A853" },
 ]
 
-const APPLICATION_DEADLINE = new Date(2026, 7, 2, 23, 59, 0)
+const APPLICATION_DEADLINE = new Date(2026, 7, 16, 23, 59, 0)
 
 const DEV_TEAM_FORM_URL = "https://forms.gle/xPrMUXsoJyXJ67QD7"
 const TRACK_LEAD_FORM_URL = "https://forms.gle/vqUFRmeaCoy6uvQy7"
@@ -810,7 +810,7 @@ export default function ApplyPage() {
               </div>
               <div className="py-8">
                 <p className="text-white/45 text-sm mb-3">{isExpired ? "Applications closed" : "Applications close"}</p>
-                <p className="text-3xl font-bold tracking-tight leading-none">2ND AUGUST</p>
+                <p className="text-3xl font-bold tracking-tight leading-none">16TH AUGUST</p>
                 <p className="text-sm text-white/45 mt-2">11:59 PM · WAT</p>
               </div>
               <div className="dossier-rule" />
@@ -1215,7 +1215,7 @@ export default function ApplyPage() {
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-white/25 font-mono mb-12">Applications close August 2, 2026 at 11:59 PM</p>
+              <p className="text-sm text-white/25 font-mono mb-12">Applications close August 16, 2026 at 11:59 PM</p>
             </>
           )}
 

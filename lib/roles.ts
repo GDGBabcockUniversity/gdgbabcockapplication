@@ -47,6 +47,11 @@ export const TEAMS: Team[] = [
   },
 ]
 
+const WRITING_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSc3FacZcMQ7AXQ3Nmo6NfzJQlf5XryXNJJJWNlI19echSGSiw/viewform"
+const MEDIA_PRODUCTION_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSfluJ0ObE1CEoxCYD3bY0T7GYQ7-eyEzjS4idCn4eXcERZ-BA/viewform"
+const MARKETING_DESIGN_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSezZWlVjl4I9pCev4K8dVwIpUM99XprJxVlwrPabDG4Uq5GMQ/viewform"
+const MARKETING_SOCIAL_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSeKuF_elLDQ8Jqw78re35w9HHTOnXSCbsUPmyDWYVyWpA2pfg/viewform"
+
 export const ROLES: Role[] = [
   /* ─────────── Media Team ─────────── */
   {
@@ -77,7 +82,7 @@ export const ROLES: Role[] = [
       "Interest in the community's work, technical or not",
     ],
     color: "#4285F4",
-    formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSc3FacZcMQ7AXQ3Nmo6NfzJQlf5XryXNJJJWNlI19echSGSiw/viewform",
+    formUrl: WRITING_FORM,
   },
   {
     slug: "text-editor",
@@ -107,6 +112,7 @@ export const ROLES: Role[] = [
       "Interest in building a house style, not just fixing typos",
     ],
     color: "#EA4335",
+    formUrl: WRITING_FORM,
   },
   {
     slug: "photographer",
@@ -136,6 +142,7 @@ export const ROLES: Role[] = [
       "Willingness to shoot what the team needs, not only what you feel like shooting",
     ],
     color: "#F9AB00",
+    formUrl: MEDIA_PRODUCTION_FORM,
   },
   {
     slug: "videographer",
@@ -165,6 +172,7 @@ export const ROLES: Role[] = [
       "Collaboration with photographers, planners, and marketing on shared shoots",
     ],
     color: "#34A853",
+    formUrl: MEDIA_PRODUCTION_FORM,
   },
 
   /* ─────────── Marketing Team ─────────── */
@@ -196,6 +204,7 @@ export const ROLES: Role[] = [
       "Interest in building templates the whole team can reuse",
     ],
     color: "#4285F4",
+    formUrl: MARKETING_DESIGN_FORM,
   },
   {
     slug: "content-creator",
@@ -225,6 +234,7 @@ export const ROLES: Role[] = [
       "Voice that fits a community brand, not just a personal one",
     ],
     color: "#EA4335",
+    formUrl: MARKETING_SOCIAL_FORM,
   },
   {
     slug: "graphic-designer",
@@ -254,6 +264,7 @@ export const ROLES: Role[] = [
       "Openness to critique and iteration",
     ],
     color: "#F9AB00",
+    formUrl: MARKETING_DESIGN_FORM,
   },
   {
     slug: "brand-content-strategist",
@@ -283,6 +294,7 @@ export const ROLES: Role[] = [
       "Judgment about tone — when to be playful and when to be plain",
     ],
     color: "#34A853",
+    formUrl: MARKETING_SOCIAL_FORM,
   },
   {
     slug: "social-media-manager",
@@ -312,6 +324,7 @@ export const ROLES: Role[] = [
       "Instinct for the community's voice",
     ],
     color: "#4285F4",
+    formUrl: MARKETING_SOCIAL_FORM,
   },
 
   /* ─────────── Events & Planning ─────────── */

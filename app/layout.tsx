@@ -4,6 +4,7 @@ import localFont from "next/font/local"
 import { Roboto_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css"
 
 const googleSansDisplay = localFont({
@@ -73,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/gdg-logo.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
@@ -81,7 +82,9 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </head>
       <body className={`font-sans ${googleSansDisplay.variable} ${robotoMono.variable} antialiased`}>
-        <Suspense fallback={null}>{children}</Suspense>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
+          <Suspense fallback={null}>{children}</Suspense>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

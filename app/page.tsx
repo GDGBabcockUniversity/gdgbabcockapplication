@@ -218,6 +218,8 @@ const TIMELINE = [
   { step: "04", label: "Onboarding & Integration", detail: "Join the team, get access, meet your squad, and pick up your first task", color: "#34A853" },
 ]
 
+const APPLICATION_DEADLINE = new Date(2026, 7, 19, 23, 59, 0)
+
 const VALUES = [
   { title: "Willingness to Learn", detail: "You don't need to know everything. We value curiosity and the drive to figure things out over what you already know.", icon: "📚" },
   { title: "Curiosity", detail: "You tinker, explore new tools, ask why things work the way they do, and push beyond tutorials.", icon: "🔍" },
@@ -314,13 +316,12 @@ function JobBoard() {
 /* ─────────── Main Page ─────────── */
 export default function ApplyPage() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
-  const [isExpired, setIsExpired] = useState(false)
+  const [isExpired, setIsExpired] = useState(() => Date.now() >= APPLICATION_DEADLINE.getTime())
 
   useEffect(() => {
-    const targetDate = new Date(2026, 7, 2, 23, 59, 0)
     const timer = setInterval(() => {
       const now = new Date().getTime()
-      const distance = targetDate.getTime() - now
+      const distance = APPLICATION_DEADLINE.getTime() - now
       if (distance > 0) {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
@@ -365,7 +366,9 @@ export default function ApplyPage() {
                 <p className="text-lg md:text-xl text-fg/50 max-w-xl mb-10 leading-relaxed">
                   GDG on Campus Babcock is recruiting contributors across media, marketing,
                   and events &amp; planning. Find the role that fits and apply.
-                  <span className="block mt-3 text-sm font-mono text-fg/35">Applications open — deadline August 2, 2026 at 11:59 PM</span>
+                  <span className="block mt-3 text-sm font-mono text-fg/35">
+                    {isExpired ? "Applications closed — August 19, 2026 at 11:59 PM" : "Applications open — deadline August 19, 2026 at 11:59 PM"}
+                  </span>
                 </p>
               </div>
 
@@ -383,11 +386,18 @@ export default function ApplyPage() {
             <aside className="application-dossier animate-slide-in-right animation-delay-300">
               <div className="flex items-center justify-between border-b border-fg/10 pb-5">
                 <span className="text-[11px] font-mono tracking-[0.18em] text-fg/45 uppercase">Recruitment brief</span>
-                <span className="status-pill"><span className="status-dot" />Open now</span>
+                {isExpired ? (
+                  <span className="status-pill" style={{ color: "#f8c9c2", background: "rgba(234, 67, 53, 0.13)" }}>
+                    <span className="status-dot dot-red" style={{ boxShadow: "0 0 0 4px rgba(234, 67, 53, 0.12)" }} />
+                    Closed
+                  </span>
+                ) : (
+                  <span className="status-pill"><span className="status-dot" />Open now</span>
+                )}
               </div>
               <div className="py-8">
-                <p className="text-fg/45 text-sm mb-3">Applications close</p>
-                <p className="text-3xl font-bold tracking-tight leading-none">2ND AUGUST</p>
+                <p className="text-fg/45 text-sm mb-3">{isExpired ? "Applications closed" : "Applications close"}</p>
+                <p className="text-3xl font-bold tracking-tight leading-none">19TH AUGUST</p>
                 <p className="text-sm text-fg/45 mt-2">11:59 PM · WAT</p>
                 {!isExpired && (
                   <div className="mt-5 flex items-center gap-1.5 font-mono text-sm">
@@ -684,7 +694,7 @@ export default function ApplyPage() {
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-fg/30 font-mono mb-12">Applications close August 2, 2026 at 11:59 PM</p>
+              <p className="text-sm text-fg/30 font-mono mb-12">Applications close August 19, 2026 at 11:59 PM</p>
 
               <Button asChild className="bg-fg text-bg hover:bg-fg/90 rounded-full px-10 py-6 text-base font-bold transition-all duration-300 hover:shadow-2xl hover:scale-[1.03]">
                 <a href="#roles">Browse Open Roles</a>

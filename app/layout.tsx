@@ -30,10 +30,24 @@ const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
 })
 
+const SITE_URL = "https://gdgbabcockapplications.vercel.app"
+const TITLE = "Apply — GDG on Campus Babcock"
+const DESCRIPTION =
+  "Applications are open for the 2026 GDG on Campus Babcock contributor team. Sixteen roles across Media, Marketing, and Events & Planning — writers, photographers, videographers, designers, social media managers, and event planners. Browse the roles and apply by September 25, 2026."
+
 export const metadata: Metadata = {
-  title: "Apply — GDG on Campus Babcock",
-  description:
-    "The 2026–2027 leadership application portal for GDG on Campus Babcock. Ten executive offices. One institution. Apply now.",
+  metadataBase: new URL(SITE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  keywords: [
+    "GDG on Campus Babcock",
+    "Google Developer Groups",
+    "Babcock University",
+    "student community application",
+    "media team",
+    "marketing team",
+    "events and planning",
+  ],
   icons: {
     icon: [
       { url: "/gdg-logo.svg", type: "image/svg+xml" },
@@ -44,12 +58,11 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Apply — GDG on Campus Babcock",
-    description:
-      "The 2026–2027 leadership application portal. Ten executive offices. One institution.",
+    title: TITLE,
+    description: DESCRIPTION,
     images: [
       {
-        url: "https://gdgbabcockapplications.vercel.app/gdg-logo.svg",
+        url: "/gdg-logo.svg",
         width: 1200,
         height: 630,
         alt: "GDG on Campus Babcock",
@@ -57,14 +70,13 @@ export const metadata: Metadata = {
     ],
     type: "website",
     siteName: "GDG on Campus Babcock",
-    url: "https://gdgbabcockapplications.vercel.app",
+    url: SITE_URL,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Apply — GDG on Campus Babcock",
-    description:
-      "The 2026–2027 leadership application portal. Ten executive offices. One institution.",
-    images: ["https://gdgbabcockapplications.vercel.app/gdg-logo.svg"],
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/gdg-logo.svg"],
   },
 }
 

@@ -366,9 +366,6 @@ export default function ApplyPage() {
                 <p className="text-lg md:text-xl text-fg/50 max-w-xl mb-10 leading-relaxed">
                   GDG on Campus Babcock is recruiting contributors across media, marketing,
                   and events &amp; planning. Find the role that fits and apply.
-                  <span className="block mt-3 text-sm font-mono text-fg/35">
-                    {isExpired ? "Applications closed — September 25, 2026 at 11:59 PM" : "Applications open — deadline September 25, 2026 at 11:59 PM"}
-                  </span>
                 </p>
               </div>
 

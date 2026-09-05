@@ -17,12 +17,12 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {
   const role = getRole((await params).slug)
-  if (!role) return { title: "Role not found — GDG on Campus Babcock" }
+  if (!role) return { title: "Role not found | GDG on Campus Babcock" }
   const team = getTeam(role.team)
   return {
-    title: `${role.title} — ${team.name} · GDG on Campus Babcock`,
+    title: `${role.title} | ${team.name} · GDG on Campus Babcock`,
     description: role.purpose,
-    openGraph: { title: `${role.title} — ${team.name}`, description: role.purpose },
+    openGraph: { title: `${role.title} | ${team.name}`, description: role.purpose },
   }
 }
 

@@ -31,9 +31,9 @@ const robotoMono = Roboto_Mono({
 })
 
 const SITE_URL = "https://gdgbabcockapplications.vercel.app"
-const TITLE = "Apply — GDG on Campus Babcock"
+const TITLE = "Apply | GDG on Campus Babcock"
 const DESCRIPTION =
-  "Applications are open for the 2026 GDG on Campus Babcock contributor team. Sixteen roles across Media, Marketing, and Events & Planning — writers, photographers, videographers, designers, social media managers, and event planners. Browse the roles and apply by September 25, 2026."
+  "Applications are open for the 2026 GDG on Campus Babcock contributor team. Sixteen roles across Media, Marketing, and Events & Planning: writers, photographers, videographers, designers, social media managers, and event planners. Browse the roles and apply by September 25, 2026."
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

@@ -197,7 +197,7 @@ const PRODUCTS = [
     name: "Babcock 100",
     description: "Annual recognition of 100 students making an impact. All departments.",
     owner: "Media Lead",
-    href: "https://gdgbabcock.com",
+    href: "https://www.babcock100.com/",
     color: "#4285F4",
     image: "/product-babcock100.png",
   },
@@ -214,7 +214,7 @@ const PRODUCTS = [
 const TIMELINE = [
   { step: "01", label: "Applications Open", detail: "Pick a role and submit its application form", color: "#4285F4" },
   { step: "02", label: "Review & Portfolio Check", detail: "Team leads review applications, portfolios, and past work", color: "#EA4335" },
-  { step: "03", label: "Interview", detail: "Short chat — walk us through your work, interests, and what you want to learn", color: "#F9AB00" },
+  { step: "03", label: "Interview", detail: "Short chat, walk us through your work, interests, and what you want to learn", color: "#F9AB00" },
   { step: "04", label: "Onboarding & Integration", detail: "Join the team, get access, meet your squad, and pick up your first task", color: "#34A853" },
 ]
 
@@ -224,7 +224,7 @@ const VALUES = [
   { title: "Willingness to Learn", detail: "You don't need to know everything. We value curiosity and the drive to figure things out over what you already know.", icon: "📚" },
   { title: "Curiosity", detail: "You tinker, explore new tools, ask why things work the way they do, and push beyond tutorials.", icon: "🔍" },
   { title: "Collaboration", detail: "You share what you learn, review work constructively, and lift others up instead of working in isolation.", icon: "🤝" },
-  { title: "Product Thinking", detail: "You care about why we build something and who it serves — not just the craft behind it.", icon: "💡" },
+  { title: "Product Thinking", detail: "You care about why we build something and who it serves, not just the craft behind it.", icon: "💡" },
   { title: "Reliability", detail: "You show up, communicate early when you're stuck, and follow through on what you commit to.", icon: "⚡" },
   { title: "Community Spirit", detail: "You help others grow, contribute openly, share knowledge freely, and make the team better.", icon: "🌍" },
 ]
@@ -453,9 +453,9 @@ export default function ApplyPage() {
                   <span className="shimmer-text">tech community.</span>
                 </h2>
                 <p className="text-fg/50 leading-relaxed mb-4 text-lg">
-                  GDG on Campus Babcock is open to every student at Babcock University —
+                  GDG on Campus Babcock is open to every student at Babcock University,
                   regardless of department, level, or background. Computer Science, Nursing,
-                  Law, Accounting — if you&apos;re curious about technology, you belong here.
+                  Law, Accounting. If you&apos;re curious about technology, you belong here.
                 </p>
                 <p className="text-fg/50 leading-relaxed text-lg">
                   We build products, run programs, publish stories, and recognize impact.
@@ -527,7 +527,7 @@ export default function ApplyPage() {
               <GoogleDots className="mb-4" />
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">Open Roles</h2>
               <p className="text-lg text-fg/50 max-w-2xl">
-                {ROLES.length} roles across {TEAMS.length} teams. Every role has its own brief —
+                {ROLES.length} roles across {TEAMS.length} teams. Every role has its own brief:
                 what you&apos;ll do, what we ask for, and what the panel looks for.
               </p>
             </div>
@@ -634,7 +634,7 @@ export default function ApplyPage() {
               <GoogleDots className="mb-4" />
               <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">How It Works</h2>
               <p className="text-lg text-fg/40 max-w-2xl">
-                We don&apos;t do elections. We do structured selection — applications, portfolio review, and a short chat with the team leads.
+                We don&apos;t do elections. We do structured selection: applications, portfolio review, and a short chat with the team leads.
               </p>
             </div>
 
@@ -678,7 +678,7 @@ export default function ApplyPage() {
           <p className="text-lg text-fg/40 mb-12 max-w-xl mx-auto">
             {isExpired
               ? "Thank you to everyone who applied. The team leads are now reviewing submissions."
-              : "We care about willingness to build and curiosity — not grades or a stacked portfolio."}
+              : "We care about willingness to build and curiosity, not grades or a stacked portfolio."}
           </p>
 
           {!isExpired && (

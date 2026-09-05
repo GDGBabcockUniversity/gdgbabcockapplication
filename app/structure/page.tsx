@@ -117,7 +117,7 @@ const structure = {
           ]
         },
         {
-          name: "TL — Development",
+          name: "TL: Development",
           tier: 3,
           children: [
             { name: "Deputy TL Development", tier: "deputy" },
@@ -137,7 +137,7 @@ const structure = {
           ]
         },
         {
-          name: "TL — Tracks",
+          name: "TL: Tracks",
           tier: 3,
           children: [
             { name: "Deputy TL Tracks", tier: "deputy" },
@@ -242,7 +242,7 @@ function Node({ node, depth = 0, forceOpen }: { node: any; depth?: number; force
           </span>
         )}
         {node.name}
-        {node.sub && <span className="font-normal opacity-60 text-[10px]">— {node.sub}</span>}
+        {node.sub && <span className="font-normal opacity-60 text-[10px]">· {node.sub}</span>}
       </div>
 
       {hasChildren && isEffectivelyOpen && (
@@ -300,21 +300,21 @@ export default function OrganogramPage() {
 
       <div className="mb-6">
         <div className="text-muted-foreground text-[10px] tracking-widest uppercase mb-2 font-semibold">
-          Advisory Layer — Non-hierarchical
+          Advisory Layer: Non-hierarchical
         </div>
         <div className="flex gap-3 flex-wrap items-center">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[var(--google-yellow)] text-[var(--foreground)] rounded-md text-xs font-bold border border-[var(--google-yellow)]">
             Dr. Ernest Onuiri
-            <span className="font-normal text-[10px] opacity-80">— Campus Adviser & Institutional Sponsor</span>
+            <span className="font-normal text-[10px] opacity-80">· Campus Adviser & Institutional Sponsor</span>
           </div>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-card text-[var(--google-yellow)] rounded-md text-xs font-bold border border-[var(--google-yellow)]">
             Alumni Advisory Council
-            <span className="font-normal text-[10px] opacity-80">— Art. VIII · Schedule E</span>
+            <span className="font-normal text-[10px] opacity-80">Art. VIII · Schedule E</span>
           </div>
         </div>
         <div className="flex items-center gap-2 mt-2 ml-1">
           <div className="w-7 h-[1px] bg-[var(--google-yellow)] opacity-50" />
-          <span className="text-muted-foreground text-[10px] tracking-wide">advisory relationship ↕ — no operational control</span>
+          <span className="text-muted-foreground text-[10px] tracking-wide">advisory relationship ↕, no operational control</span>
         </div>
       </div>
 

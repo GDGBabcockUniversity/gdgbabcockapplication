@@ -50,7 +50,7 @@ export function SiteFooter() {
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`${s.name} — ${s.handle}`}
+                aria-label={`${s.name}, ${s.handle}`}
                 title={`${s.name} · ${s.handle}`}
                 className="p-2.5 rounded-full border border-fg/10 text-fg/45 hover:text-fg hover:border-fg/30 hover:bg-fg/5 transition-colors"
               >

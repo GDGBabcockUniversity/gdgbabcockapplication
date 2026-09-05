@@ -59,7 +59,7 @@ export const ROLES: Role[] = [
     team: "media",
     title: "Writer",
     mandate: "Tell the Story",
-    purpose: "Write the words that carry GDG Babcock — event recaps, RADAR features, member spotlights, and announcements. Turn what the community does into something people actually want to read.",
+    purpose: "Write the words that carry GDG Babcock: event recaps, RADAR features, member spotlights, and announcements. Turn what the community does into something people actually want to read.",
     responsibilities: [
       "Write articles, recaps, and features for RADAR and the community blog",
       "Cover events as they happen and turn notes into publishable pieces",
@@ -70,13 +70,13 @@ export const ROLES: Role[] = [
     ],
     requirements: [
       "Strong written English and a sense for structure, pacing, and clarity",
-      "Writing samples of any kind — articles, essays, newsletters, threads, coursework",
+      "Writing samples of any kind: articles, essays, newsletters, threads, coursework",
       "Ability to meet deadlines around events and publishing schedules",
       "Willingness to research a topic before writing about it",
     ],
     panelLooksFor: [
       "Quality and voice of your writing samples",
-      "Curiosity — you ask good questions and dig past the obvious angle",
+      "Curiosity: you ask good questions and dig past the obvious angle",
       "Openness to editing; you treat feedback as part of the craft",
       "Reliability around deadlines, especially event coverage",
       "Interest in the community's work, technical or not",
@@ -101,11 +101,11 @@ export const ROLES: Role[] = [
     requirements: [
       "Excellent command of grammar, punctuation, and English usage",
       "Sharp eye for inconsistency, ambiguity, and padding",
-      "Experience editing others' writing — student publications, coursework, or personal projects",
+      "Experience editing others' writing: student publications, coursework, or personal projects",
       "Comfort working to a deadline and to a style guide",
     ],
     panelLooksFor: [
-      "Precision — you catch what everyone else read past",
+      "Precision: you catch what everyone else read past",
       "Judgment about when to cut and when to leave a writer's voice alone",
       "Tact in delivering edits so writers keep wanting to work with you",
       "Consistency of standards across pieces and contributors",
@@ -121,7 +121,7 @@ export const ROLES: Role[] = [
     mandate: "Capture the Moment",
     purpose: "Document GDG Babcock as it happens. Shoot the events, the people, and the small moments that become the community's visual record and the material every other team builds on.",
     responsibilities: [
-      "Shoot community events — meetups, workshops, ORBIT, GDG Week, DevFest",
+      "Shoot community events: meetups, workshops, ORBIT, GDG Week, DevFest",
       "Capture portraits and candid coverage of members, speakers, and teams",
       "Cull, edit, and colour-grade shots to a consistent look",
       "Deliver organised, tagged photo sets to the media and marketing teams on schedule",
@@ -136,7 +136,7 @@ export const ROLES: Role[] = [
     ],
     panelLooksFor: [
       "Eye for framing, light, and moment in your existing work",
-      "Consistency — a recognisable look across a set, not one lucky frame",
+      "Consistency: a recognisable look across a set, not one lucky frame",
       "Reliability at events and speed of turnaround afterwards",
       "Comfort working around people and directing them gently",
       "Willingness to shoot what the team needs, not only what you feel like shooting",
@@ -149,7 +149,7 @@ export const ROLES: Role[] = [
     team: "media",
     title: "Videographer",
     mandate: "Put It in Motion",
-    purpose: "Film and cut the video that shows what GDG Babcock feels like from the inside — event aftermovies, recap reels, interviews, and short-form clips that travel.",
+    purpose: "Film and cut the video that shows what GDG Babcock feels like from the inside: event aftermovies, recap reels, interviews, and short-form clips that travel.",
     responsibilities: [
       "Film events, interviews, and behind-the-scenes footage across the community calendar",
       "Edit aftermovies, recap reels, and short-form vertical clips for social",
@@ -167,7 +167,7 @@ export const ROLES: Role[] = [
     panelLooksFor: [
       "Quality and rhythm of your existing edits",
       "Instinct for which moments carry a story",
-      "Turnaround discipline — a recap is worth far less two weeks late",
+      "Turnaround discipline: a recap is worth far less two weeks late",
       "Attention to audio, not just picture",
       "Collaboration with photographers, planners, and marketing on shared shoots",
     ],
@@ -181,7 +181,7 @@ export const ROLES: Role[] = [
     team: "marketing",
     title: "Video Editor / Motion Designer",
     mandate: "Make It Move",
-    purpose: "Cut and animate the video that carries GDG Babcock's campaigns — promos, teasers, motion graphics, and the short-form work that makes people stop scrolling.",
+    purpose: "Cut and animate the video that carries GDG Babcock's campaigns: promos, teasers, motion graphics, and the short-form work that makes people stop scrolling.",
     responsibilities: [
       "Edit promotional videos, teasers, and recap content for campaigns",
       "Create motion graphics, animated titles, and transitions on brand",
@@ -198,7 +198,7 @@ export const ROLES: Role[] = [
     ],
     panelLooksFor: [
       "Craft and polish visible in your existing reel",
-      "Sense of timing — cuts that land with the music and the message",
+      "Sense of timing: cuts that land with the music and the message",
       "Range across formats, from a 15-second vertical to a 3-minute recap",
       "Speed of iteration and comfort with revision rounds",
       "Interest in building templates the whole team can reuse",
@@ -211,7 +211,7 @@ export const ROLES: Role[] = [
     team: "marketing",
     title: "Content Creator",
     mandate: "Feed the Feed",
-    purpose: "Create the day-to-day content that keeps GDG Babcock visible — posts, captions, carousels, and short videos that make people want to show up.",
+    purpose: "Create the day-to-day content that keeps GDG Babcock visible: posts, captions, carousels, and short videos that make people want to show up.",
     responsibilities: [
       "Create and publish content across X, Instagram, LinkedIn, and TikTok",
       "Write captions and hooks that fit each platform's voice",
@@ -222,12 +222,12 @@ export const ROLES: Role[] = [
     ],
     requirements: [
       "Active understanding of how content actually performs on social platforms",
-      "Samples of content you've made — accounts, posts, videos, or campaigns",
+      "Samples of content you've made: accounts, posts, videos, or campaigns",
       "Comfort with basic design and editing tools (Canva, Figma, CapCut, or similar)",
-      "Consistency — you can post on schedule, not only when inspired",
+      "Consistency: you can post on schedule, not only when inspired",
     ],
     panelLooksFor: [
-      "Ideas — you show up with concepts, not just execution",
+      "Ideas: you show up with concepts, not just execution",
       "Platform fluency and awareness of what's currently working",
       "Consistency and follow-through on a posting cadence",
       "Willingness to look at numbers and change course",
@@ -241,7 +241,7 @@ export const ROLES: Role[] = [
     team: "marketing",
     title: "Graphic Designer",
     mandate: "Set the Look",
-    purpose: "Design the visual material that represents GDG Babcock everywhere — event flyers, social graphics, decks, merch, and the templates that keep it all consistent.",
+    purpose: "Design the visual material that represents GDG Babcock everywhere: event flyers, social graphics, decks, merch, and the templates that keep it all consistent.",
     responsibilities: [
       "Design event flyers, social graphics, banners, and campaign assets",
       "Build and maintain templates so recurring formats stay fast and consistent",
@@ -278,7 +278,7 @@ export const ROLES: Role[] = [
       "Own the content calendar and set the theme and goal for each cycle",
       "Analyse performance and turn what you learn into the next plan",
       "Brief creators, designers, and editors so output stays on message",
-      "Research the audience — what students care about and where they are",
+      "Research the audience: what students care about and where they are",
     ],
     requirements: [
       "Understanding of brand strategy, audience segmentation, and campaign planning",
@@ -287,11 +287,11 @@ export const ROLES: Role[] = [
       "Experience running a campaign, page, or initiative is a plus",
     ],
     panelLooksFor: [
-      "Strategic thinking — you connect content to an actual outcome",
+      "Strategic thinking: you connect content to an actual outcome",
       "Ability to explain why a message works, not just that it does",
       "Evidence of planning that survived contact with a real audience",
       "Comfort briefing and coordinating other creatives",
-      "Judgment about tone — when to be playful and when to be plain",
+      "Judgment about tone: when to be playful and when to be plain",
     ],
     color: "#34A853",
     formUrl: MARKETING_SOCIAL_FORM,
@@ -301,13 +301,13 @@ export const ROLES: Role[] = [
     team: "marketing",
     title: "Social Media Manager",
     mandate: "Own the Channels",
-    purpose: "Run GDG Babcock's social presence end to end — scheduling, publishing, replying, and growing the audience the rest of the community's work depends on.",
+    purpose: "Run GDG Babcock's social presence end to end: scheduling, publishing, replying, and growing the audience the rest of the community's work depends on.",
     responsibilities: [
       "Manage day-to-day publishing across all community social accounts",
       "Schedule content against the campaign calendar and event timelines",
       "Respond to comments, DMs, and mentions in the community's voice",
       "Track reach, engagement, and growth, and report on what moved",
-      "Run live coverage during events — threads, stories, real-time posts",
+      "Run live coverage during events: threads, stories, real-time posts",
       "Coordinate with creators, designers, and strategy to keep the queue full",
     ],
     requirements: [
@@ -349,7 +349,7 @@ export const ROLES: Role[] = [
       "Availability in the run-up to and during community events",
     ],
     panelLooksFor: [
-      "Follow-through — plans that turned into things that actually happened",
+      "Follow-through: plans that turned into things that actually happened",
       "Calm under pressure when the schedule slips on the day",
       "Ability to coordinate people without micromanaging them",
       "Attention to the detail that separates a smooth event from a rough one",
@@ -362,11 +362,11 @@ export const ROLES: Role[] = [
     team: "events",
     title: "Logistics Management",
     mandate: "Make the Day Work",
-    purpose: "Own everything physical about an event — venue, setup, equipment, materials, and flow — so that on the day, everything is where it needs to be when it needs to be there.",
+    purpose: "Own everything physical about an event (venue, setup, equipment, materials, and flow) so that on the day, everything is where it needs to be when it needs to be there.",
     responsibilities: [
       "Secure venues and handle room bookings, permissions, and access",
       "Plan setup, layout, seating, signage, and teardown for each event",
-      "Manage equipment — AV, power, internet, projectors, seating, and materials",
+      "Manage equipment: AV, power, internet, projectors, seating, and materials",
       "Coordinate transport, deliveries, and on-site movement of people and things",
       "Build contingency plans for the failures that actually happen",
       "Lead the setup crew on event day and keep the schedule on the ground",
@@ -378,7 +378,7 @@ export const ROLES: Role[] = [
       "Comfort coordinating a crew and communicating under time pressure",
     ],
     panelLooksFor: [
-      "Anticipation — you plan for what goes wrong before it does",
+      "Anticipation: you plan for what goes wrong before it does",
       "Resourcefulness when something breaks an hour before doors",
       "Physical follow-through, not just planning on paper",
       "Clear communication with crew, vendors, and venue staff",
@@ -391,7 +391,7 @@ export const ROLES: Role[] = [
     team: "events",
     title: "Vendor & Partner Management",
     mandate: "Build the Relationships",
-    purpose: "Own the outside relationships that make events possible — vendors, sponsors, and partners. Find them, negotiate with them, and make sure both sides get what they were promised.",
+    purpose: "Own the outside relationships that make events possible: vendors, sponsors, and partners. Find them, negotiate with them, and make sure both sides get what they were promised.",
     responsibilities: [
       "Source and evaluate vendors for catering, printing, AV, venue, and merchandise",
       "Negotiate pricing, scope, and terms, and keep agreements documented",
@@ -407,7 +407,7 @@ export const ROLES: Role[] = [
       "Professional, dependable follow-up habits",
     ],
     panelLooksFor: [
-      "Professionalism — you represent the community well to outsiders",
+      "Professionalism: you represent the community well to outsiders",
       "Negotiation judgment about what to push on and what to concede",
       "Diligence in tracking commitments on both sides",
       "Relationship-building instinct that outlasts a single event",
@@ -437,7 +437,7 @@ export const ROLES: Role[] = [
     ],
     panelLooksFor: [
       "Accuracy and discipline in record-keeping",
-      "Trustworthiness — this role handles real money",
+      "Trustworthiness: this role handles real money",
       "Ability to flag a problem early instead of at reconciliation",
       "Practical judgment about trade-offs and priorities",
       "Clear reporting that non-finance teammates can follow",
@@ -454,7 +454,7 @@ export const ROLES: Role[] = [
       "Design and run attendee feedback surveys for each event",
       "Collect attendance, engagement, and outcome data against event goals",
       "Run post-event retrospectives with the planning and logistics teams",
-      "Write up findings — what worked, what didn't, what to change",
+      "Write up findings: what worked, what didn't, what to change",
       "Maintain an event playbook that improves with every cycle",
       "Track whether recommendations from the last event were acted on",
     ],
@@ -466,7 +466,7 @@ export const ROLES: Role[] = [
     ],
     panelLooksFor: [
       "Ability to turn raw feedback into a specific, actionable recommendation",
-      "Objectivity — you report what the data says, not what people hoped",
+      "Objectivity: you report what the data says, not what people hoped",
       "Facilitation skill in running a retrospective that stays constructive",
       "Follow-through on making sure lessons reach the next cycle",
       "Interest in continuous improvement as an ongoing practice",
@@ -479,5 +479,5 @@ export const getRole = (slug: string) => ROLES.find((r) => r.slug === slug)
 
 export const getTeam = (id: TeamId) => TEAMS.find((t) => t.id === id)!
 
-/** Role form wins over the team form. Empty means not ready — Apply renders disabled. */
+/** Role form wins over the team form. Empty means not ready, so Apply renders disabled. */
 export const formUrlFor = (role: Role) => role.formUrl || getTeam(role.team).formUrl

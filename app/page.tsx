@@ -205,7 +205,7 @@ const PRODUCTS = [
     name: "BabcockVotes",
     description: "The campus election platform. Built by GDG, used by the whole school.",
     owner: "Technical Lead",
-    href: "https://babcockvotes.com",
+    href: "https://www.babcockvotes.com/",
     color: "#EA4335",
     image: "/product-votes.png",
   },
@@ -218,7 +218,7 @@ const TIMELINE = [
   { step: "04", label: "Onboarding & Integration", detail: "Join the team, get access, meet your squad, and pick up your first task", color: "#34A853" },
 ]
 
-const APPLICATION_DEADLINE = new Date(2026, 7, 19, 23, 59, 0)
+const APPLICATION_DEADLINE = new Date(2026, 8, 25, 23, 59, 0)
 
 const VALUES = [
   { title: "Willingness to Learn", detail: "You don't need to know everything. We value curiosity and the drive to figure things out over what you already know.", icon: "📚" },
@@ -367,7 +367,7 @@ export default function ApplyPage() {
                   GDG on Campus Babcock is recruiting contributors across media, marketing,
                   and events &amp; planning. Find the role that fits and apply.
                   <span className="block mt-3 text-sm font-mono text-fg/35">
-                    {isExpired ? "Applications closed — August 19, 2026 at 11:59 PM" : "Applications open — deadline August 19, 2026 at 11:59 PM"}
+                    {isExpired ? "Applications closed — September 25, 2026 at 11:59 PM" : "Applications open — deadline September 25, 2026 at 11:59 PM"}
                   </span>
                 </p>
               </div>
@@ -397,7 +397,7 @@ export default function ApplyPage() {
               </div>
               <div className="py-8">
                 <p className="text-fg/45 text-sm mb-3">{isExpired ? "Applications closed" : "Applications close"}</p>
-                <p className="text-3xl font-bold tracking-tight leading-none">19TH AUGUST</p>
+                <p className="text-3xl font-bold tracking-tight leading-none">25TH SEPTEMBER</p>
                 <p className="text-sm text-fg/45 mt-2">11:59 PM · WAT</p>
                 {!isExpired && (
                   <div className="mt-5 flex items-center gap-1.5 font-mono text-sm">
@@ -675,7 +675,7 @@ export default function ApplyPage() {
             {isExpired ? (
               "Applications are closed."
             ) : (
-              <span className="shimmer-text">The window is open.</span>
+              <span className="shimmer-text">Applications are open.</span>
             )}
           </h2>
           <p className="text-lg text-fg/40 mb-12 max-w-xl mx-auto">
@@ -694,7 +694,7 @@ export default function ApplyPage() {
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-fg/30 font-mono mb-12">Applications close August 19, 2026 at 11:59 PM</p>
+              <p className="text-sm text-fg/30 font-mono mb-12">Applications close September 25, 2026 at 11:59 PM</p>
 
               <Button asChild className="bg-fg text-bg hover:bg-fg/90 rounded-full px-10 py-6 text-base font-bold transition-all duration-300 hover:shadow-2xl hover:scale-[1.03]">
                 <a href="#roles">Browse Open Roles</a>
